@@ -1,0 +1,23 @@
+@import url(~bootstrap/dist/css/bootstrap.css);
+* {
+  margin: 0; }
+
+body {
+  overflow-x: hidden;
+  max-width: 100%; }
+
+.site-btns {
+  border: 2px solid black !important;
+  border-radius: 0px !important;
+  font-size: 1rem !important;
+  font-weight: bold !important; }
+
+.items-carousel-title {
+  font-size: 1.2rem; }
+
+div.card-desc > p {
+  font-weight: bold;
+  font-size: 1.15rem; }
+
+div.card-desc {
+  margin-top: calc(5px * (height*1)); }

@@ -1,0 +1,38 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+@mixin btns{
+    border: 2px solid black !important;
+    border-radius: 0px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+@mixin desc{
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+*{
+    margin:0;
+}
+body{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.site-btns{
+    @include btns;
+
+}
+
+.items-carousel-title{
+    font-size: 1.2rem;
+
+}
+div.card-desc > p{
+    @include desc;
+
+}
+div.card-desc{
+    margin-top: calc(5px * (height*1));
+}
