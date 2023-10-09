@@ -1,0 +1,9 @@
+@use "./variables.scss";
+@mixin header-btn{
+    color: variables.$headbtn;
+    background-color: #084c69 !important;
+    color: white;
+    width:50%;
+    line-height: 2.7rem;
+    border:none !important;
+}

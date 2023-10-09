@@ -1,14 +1,15 @@
-@import "~bootstrap/dist/css/bootstrap.css";
-
+@import "./styles/_myheader.scss";
+@import "./styles/_card.scss";
+@import "./styles/_myfooter.scss";
 
 @mixin btns{
     border: 2px solid black !important;
     border-radius: 0px !important;
     font-size: 1rem !important;
-    font-weight: bold !important;
+    font-weight:500 !important;
 }
 @mixin desc{
-    font-weight: bold;
+    font-weight: 400 !important;
     font-size: 1.15rem;
 }
 
@@ -35,4 +36,35 @@ div.card-desc > p{
 }
 div.card-desc{
     margin-top: calc(5px * (height*1));
+}
+
+
+.my-header{
+    @include myheader;
+}
+.card-header{
+    
+    @include card-header;
+}
+.card-body{
+    @include card-body;
+}
+.samples p{
+    font-size:1rem !important;
+}
+.service{
+    @media screen and (max-width:600px) {
+        
+            font-size:2rem !important;
+            text-align: center;
+    }
+}
+.compare{
+    width:75%;
+    @media screen and (max-width:600px) {
+        width:100% !important;
+    }
+}
+.myfooter{
+    @include myfooter;
 }

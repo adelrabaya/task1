@@ -1,0 +1,49 @@
+@import "./headerbutton";
+@import './headertitle';
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
+@mixin myheader{
+    h3{
+        @include title;
+    }
+    button{
+        @include header-btn;
+    }
+    button:hover{
+        background-color: #0f8dc4 !important;
+        color: white;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width:100%;
+        padding:2rem !important;
+        margin: 1rem !important;
+        
+        p{
+            font-size: 0.8rem;
+        }
+        h3{
+            font-size: 1.4rem;
+        }
+        
+    }
+
+    @media screen and (max-width: 600px) {
+        width:100%;
+        padding:0rem !important;
+        margin: 0rem !important;
+        
+        p{
+            font-size: 0.9rem;
+        }
+        h3{
+            font-size: 1.3rem;
+        }
+        
+    }
+    
+    @media screen and (min-width:1200px) {
+        width:75%;
+        margin:1rem !important;
+        
+    }
+}

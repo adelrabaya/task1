@@ -1,0 +1,10 @@
+@mixin card-header{
+    background-color: white !important;
+    h3{
+    color: #007fadd8 !important;
+    }
+}
+@mixin card-body{
+    background-color: #f2f1ee !important;
+    color:black;
+}
