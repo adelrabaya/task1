@@ -7,12 +7,372 @@
     <title>Bootstrap demo</title>
     <link rel="stylesheet"  href="styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6d22bc3524.js" crossorigin="anonymous"></script>
     <script src="reuse.js" type="text/javascript" ></script>
+    <script src="script.js" type="text/javascript" defer></script>
+    <script src="mask.js" defer ></script>
+    <script src="validate.js" defer></script>
+    <script src="fetching.js" defer></script>
   </head>
+
   <body style="width:100vw">
-    <div class="row g-0 h-50 "><!-- Head of the page -->
-        <div class="col-lg-4 col-12 order-last order-lg-first d-flex justify-content-center p-4" > <!--HEADER TEXT DIV-->
-            <aside class="justify-content-center   my-header  d-flex flex-column" >
+    <div class="mask"></div>
+    <nav class="container-fluid max-width-container g-0 p-3 unmasked" style="position: relative;"><!-- Head of the page -->
+        <div class="row g-0 d-flex flex-row justify-content-evenly ">
+            <section class="col-12 col-m-4 col-lg-2 d-flex justify-content-center align-items-center" ><h3 class=" vari" >vari®</h3></section>
+            <section class="col-12 col-m-4 col-lg-9">
+                    <div class="row g-0"><!--Upper Settings-->
+                        <section class="col-12 col-m-12 col-lg-12" >
+                            <ul class="header-ul text-end pt-3">
+                                <li class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-my-account" style="width:20px;height:20px;" alt="account"/>
+                                    <a >MyAccount <i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a></li>
+                                    <div class="dropdown-menu   justify-content-center" >
+                                        <li class="dropdown-item">
+                                            <ul class="flex-wrap" style="list-style-type: none; padding-left:0px;">
+                                                <li>LogIn/Create Account</li>
+                                                <li>My List</li>
+                                                <li>Order Status</li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                <li class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-country" style="width: 20px; height: 20px;"/>
+                                    <a>United States<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a></li>
+                                    <div class="dropdown-menu   justify-content-center" >
+                                        <li class="dropdown-item">
+                                            <ul class="flex-wrap" style="list-style-type: none; padding-left:0px;">
+                                                <li class="p-1" style="color: #373737; font-size:0.75rem ;">SELECT SHIPPING REGION</li>
+                                                <li class="p-1">United States</li>
+                                                <li class="p-1">United States</li>
+                                                <li class="p-1">Australia</li>
+                                                <li class="p-1">Canada</li>
+                                                <li class="p-1">Europe</li>
+                                                <li class="p-1">United Kingdom</li>
+                                                <li class="p-1">Israel</li>
+                                                <li class="p-1">Singapore/Malaysia</li>
+                                                <li class="p-1">South Africa</li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                <li ><a style="text-decoration: none; color:black;">+1 (800) 207-2587</a></li>
+                            </ul>
+                        </section>
+    
+                    </div>
+                    <div class="row g-0 d-flex"><!-- CATEGORY MENU-->
+                        <section class="col-12 col-m-6 col-lg-8" >
+                            <ul class="header-ul">
+                                <li class="fw-bold dropdown"  style="position: static !important;">
+                                    <!-- <i class="fa-solid fa-angle-down ms-1"  style="color: rgb(0, 162, 255);"></i> -->
+                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Products<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                    <div class="dropdown-menu mega  justify-content-center"  >
+                                        
+                                        <div class="dropdown-item row d-flex   container-fluid max-width-container w-100 "   ><!--Products-->
+                                            <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
+                                            <div class="dropdown-child col-12 col-m-8 col-lg-6"><!-- Product Categories-->
+                                                <ul class="flex-wrap">
+                                                    <li class="dropdown-item">
+                                                        <a>VariDesk Converters</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>For Desktops</li>
+                                                            <li>For Small Spaces</li>
+                                                            <li>Shop All VariDesk Converters</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Desks & Tables</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>Standing Desks</li>
+                                                            <li>Fixed-Height Desks</li>
+                                                            <li>Tables</li>
+                                                            <li>Shop All Desks & Tables</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Seating</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>Office Seating</li>
+                                                            <li>Group Seating</li>
+                                                            <li>Lounge Seating</li>
+                                                            <li>Shop All Seating</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Storage</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>File Cabinets</li>
+                                                            <li>Storage Seating</li>
+                                                            <li>Shop All Storage</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Partitions & Privacy</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>Walls</li>
+                                                            <li>Privacy Panels</li>
+                                                            <li>Beams & Privacy Booth</li>
+                                                            <li>Shop All Partitions & Privacy</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Accessories</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>Monitor Arms</li>
+                                                            <li>Standing Mats</li>
+                                                            <li>Marker Boards</li>
+                                                            <li>Power & Lighting</li>
+                                                            <li>Shop All Accessories</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Shop All Products</a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-child col-12 col-m-4 col-lg-4 d-flex flex-column  prodSub"><!--Right SubMenu  -->
+                                                <div class="row g-0 flex-grow-1">
+                                                    <section class="col-lg-4 g-0">
+                                                        <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="variDesk">
+                                                    </section>
+                                                    <section class="col-lg-8 p-4 g-0">
+                                                        <h6>Home Office Spaces</h6>
+                                                        <p class="text-wrap small">Everthing you need to make working from home comfortable and productive</p>
+                                                        <a>Shop Home Office Sets</a>
+                                                    </section>
+                                                </div>
+                                                <div class="row g-0 flex-grow-1">
+                                                    <section class="col-lg-7 p-4 g-0">
+                                                        <h6>Find the Best Solution For You</h6>
+                                                        <p class="text-wrap small ">Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                                        <a>Take the Quiz</a>
+                                                    </section>
+                                                    <section class="col-lg-5 g-0">
+                                                        <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="variDesk">
+                                                    </section>
+                                                </div>
+                                                <div class="row g-0 flex-grow-1">
+                                                    <section class="col-lg-4 g-0">
+                                                        <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="variDesk">
+                                                    </section>
+                                                    <section class="col-lg-8 p-4 g-0">
+                                                        <h6>Save 30% on Accessories & Seating</h6>
+                                                        <p class="text-wrap small">Save 30% on up to two accessories or office seating items when you buy an electric standing desk or VariDesk converter.</p>
+                                                        <a>Discounts & Promotions</a>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                <li class="fw-bold dropdown"  style="position: static !important;">
+                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">collections<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                    <div class="dropdown-menu mega justify-content-center" style=" position: absolute; top: 100px !important;" >
+                                        <div class="dropdown-item row d-flex container-fluid max-width-container w-100 "  ><!--Products-->
+                                            <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
+                                            <div class="dropdown-child col-12 col-m-8 col-lg-6"><!-- Product Categories-->
+                                                <ul class="flex-wrap">
+                                                    <li class="dropdown-item">
+                                                        <a>Featured</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>Best Sellers</li>
+                                                            <li>New Products</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Deals</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>Promotions</li>
+                                                            <li>Essential Collection</li>
+                                                            <li>Clearance</li>
+                                                            <li>Open Box</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Shop By Space</a>
+                                                        <ul class="flex-wrap">
+                                                            <li>Work From Home Sets</li>
+                                                            <li>Private Office Sets</li>
+                                                            <li>Retrofit Spaces Sets</li>
+                                                            <li>Common Sapces Sets</li>
+                                                            <li>All Products Sets</li>
+                                                        </ul>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-child col-12 col-m-4 col-lg-4 prodSub"><!--Right SubMenu  -->
+                                                <div class="row g-0 h-75" style="padding:1rem 2rem 0;">
+                                                    <section class="col-lg-12 p-4 text-left text-wrap">
+                                                        <h2 class="fw-bold">Find the Best Solution For You</h2>
+                                                        <p class="text-wrap small">Simply answer a few quick questions and we'll suggtest the best height-adjustable product for you.</p>
+                                                        <button class="btn w-50" style="background: #003349;color: white;border-radius:0;">LEARN MORE</button>
+                                                    </section>
+                                                </div>
+                                                <div class="row g-0 ">
+                                                    <section class="col-lg-8 p-4">
+                                                        <h6>Executive Office Collection</h6>
+                                                        <p class="text-wrap small">Create sophisticated yet flexible offices with modular pieces that blend high-end quality and style with mix-and-match convenience.</p>
+                                                        <a>Shop the Collection</a>
+                                                    </section>
+                                                    <section class="col-lg-4">
+                                                        <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw778c619a/header-menu-banner/vari-product_executive-collection_06_top-nav-img.jpg" alt="variDesk">
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="fw-bold dropdown"  style="position: static !important;">
+                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Workplace<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                    <div class="dropdown-menu mega justify-content-center" style=" position: absolute; top: 100px !important;;" >
+                                        <div class="dropdown-item row d-flex container-fluid max-width-container w-100 "  ><!--Products-->
+                                            <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
+                                            <div class="dropdown-child col-12 col-m-8 col-lg-6"><!-- Product Categories-->
+                                                <ul class="flex-wrap">
+                                                    <li class="dropdown-item">
+                                                        <a>Office Furniture Solutions</a>
+                                                        <ul class="flex-wrap">
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Redesign Your Space</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Remote work solutions</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Rlexible Office Furniture</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Safer Solutions</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Free Space Planning</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Industries</a>
+                                                        <ul class="flex-wrap">
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Federal Government</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>State & Local Government</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Architecture & Design</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Education</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>View All Industries</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Showrooms</a>
+                                                        <ul class="flex-wrap text-wrap">
+                                                            <li class="w-100">See a Vari workspace for youself</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Case Studies</a>
+                                                        <ul class="flex-wrap text-wrap">
+                                                            <li class="w-100">Learn how Vari helps our clients create flexible and active workspaces</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>VariSpace</a>
+                                                        <ul class="flex-wrap text-wrap">
+                                                            <li class="w-100">Fully-furnished workspaces with first-class amenities and flexible space solutions</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>Inspirational Gallery</a>
+                                                        <ul class="flex-wrap text-wrap">
+                                                            <li class="w-100">Find inspiration for your workplace.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-child col-12 col-m-4 col-lg-4 prodSub"><!--Right SubMenu  -->
+                                                <div class="row g-0 h-75" style="padding:1rem 2rem 0;">
+                                                    <section class="col-lg-12 p-4 text-left text-wrap">
+                                                        <h2 class="fw-bold">Visit Our Showrooms</h2>
+                                                        <p class="text-wrap small">Meet us in person at any of our showroom locations, or schedule a guided tour</p>
+                                                        <button class="btn w-50" style="background: #003349;color: white;border-radius:0;">SCHEDULE A TOUR</button>
+                                                    </section>
+                                                </div>
+                                                <div class="row g-0 ">
+                                                    <section class="col-lg-12">
+                                                        <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw9277fb84/top-nav-menu/vari-topnav-showrooms-map.jpg" alt="variDesk">
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="fw-bold dropdown"  style="position: static !important;">
+                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Help<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                    <div class="dropdown-menu mega justify-content-center" style=" position: absolute; top: 100px !important;;" >
+                                        <div class="dropdown-item row d-flex container-fluid max-width-container w-100 "  ><!--Products-->
+                                            <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
+
+                                            <div class="dropdown-child col-12 col-m-8 col-lg-6"><!-- Product Categories-->
+                                                <ul class="flex-wrap">
+                                                    <li class="dropdown-item">
+                                                        <a>Resources</a>
+                                                        <ul class="flex-wrap">
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Articles & Videos</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Find Your Fit</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Inspiration Gallery</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Design Resources</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Lookbook</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Product Certifications</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item">
+                                                        <a>About</a>
+                                                        <ul class="flex-wrap">
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Contact Vari</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>FAQ</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Our Company</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Reviews</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>Showrooms</li>
+                                                            <li><i class="fa-solid fa-angle-right pe-1" style="color: #527dc7;"></i>The Vari Difference</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="dropdown-child col-12 col-m-4 p-4 col-lg-4 d-flex flex-column  prodSub"><!--Right SubMenu  -->
+                                                <div class="row g-0 flex-grow-1 m-2"><h6 style="color:#8d8d8d; text-decoration: underline;">FEATURED ARTICLE</h6></div>
+                                                <div class="row g-0 flex-grow-1 m-2">
+                                                    <section class="col-lg-4 g-0">
+                                                        <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw08e52e32/top-nav-menu/vari-topnav-articles-mistakes.jpg" alt="variDesk">
+                                                    </section>
+                                                    <section class="col-lg-8 p-4 g-0">
+                                                        <a>Top Standing Desk Mistakes to Avoid</a>
+                                                        <p class="text-wrap small">Everthing you need to make creating healthy standing habits</p>
+                                                        
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+    
+    
+                        <section class="col-12 col-m-6 col-lg-4 d-flex justify-content-end pe-3" >
+                            <form action="" class="w-75 d-flex search ">
+                                <input class="form-control w-75 h-100" type="text" placeholder="Search">
+                                <button class="fa-solid fa-magnifying-glass w-25 searchbtn text-end" style="color: #5488e3;" type="submit" title="search"></button>
+                            </form>
+                        </section>
+                    </div>
+            </section>
+            <section class="container col-4 col-m-2 col-lg-1 d-flex justify-content-start align-items-center p-5"><!--Cart-->
+                <div class="dropdown">
+                    <a class="" data-bs-toggle="dropdown"><img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-cart" style="width:40px;height:30px;" alt=""></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Your Cart Is Empty</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <hr class="m-0"><!--hr-->
+
+    </nav>
+    <div class="container-fluid max-width-container g-0">
+        <div class="row g-0 h-50 "><!--coverFace-->
+        <div class="col-lg-4 col-12 order-last order-lg-first d-flex justify-content-center ps-3" > <!--HEADER TEXT DIV-->
+            <aside class="justify-content-center  coverFace  d-flex flex-column" >
                 <p class="text-secondary">UNLOCK THE ULTIMATE WORKDAY</p>
                 <h3 >Save 30% on Accessories & Seating</h3>
                 <p class="">Vari has standing mats,monitor arms,seating, and more to help you unlock the ultimate workday.
@@ -27,12 +387,15 @@
                 <img src="https://www.vari.com/dw/image/v2/BDFT_PRD/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw650e22be/homepage-b2c/2-sept-accessories_hp-hero.jpg?sw=1500" class="img-fluid"  alt="office picture">
             </div>
         </div>
+        </div>  
     </div>
+    
     <br>
     <Section class="container-fluid px-0 m-0 pt-5 g-0 "> <!--Samples Carousel Menu-->
         <h1 class="text-center mt-4">Height-Adjustable Standing Desks & Office Furniture</h1>
-        <div class="row g-0 justify-content-center  m-4 d-flex flex-row justify-content-center">
-            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> <!--Item col-->
+        <div class="row g-0 justify-content-center  m-4 d-flex flex-row justify-content-center" id="carouselM">
+<!-- 
+            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples" > 
                 <div class="d-flex flex-column justify-content-between" style="flex: 1 1 auto">
                     <div class="row d-flex flex-column items-carousel-title text-center justify-content-center"  >
                         <div class="col-12">
@@ -53,7 +416,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> <!--Item col-->
+            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> 
                 <div class="d-flex flex-column justify-content-between" style="flex: 1 1 auto">
                     <div class="row d-flex flex-column items-carousel-title text-center justify-content-center"  >
                     <div class="col-12">
@@ -75,7 +438,7 @@
                 </div>
                 
             </div>
-            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> <!--Item col-->
+            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> 
                 <div class="d-flex flex-column justify-content-between" style="flex: 1 1 auto">
                     <div class="row d-flex flex-column items-carousel-title text-center justify-content-center"  >
                     <div class="col-12">
@@ -97,7 +460,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> <!--Item col-->
+            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> 
                 <div class="d-flex flex-column justify-content-between" style="flex: 1 1 auto">
                     <div class="row d-flex flex-column items-carousel-title text-center justify-content-center"  >
                         <div class="col-12">
@@ -119,7 +482,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> <!--Item col-->
+            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> 
                 <div class="d-flex flex-column justify-content-between" style="flex: 1 1 auto">
                     <div class="row d-flex flex-column items-carousel-title text-center justify-content-center"  >
                         <div class="col-12">
@@ -141,7 +504,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> <!--Item col-->
+            <div class="col-lg-2 col-sm-4 col-6 d-flex px-2 py-4  flex-column justify-content-between text-center samples"> 
                 <div class="d-flex flex-column justify-content-between" style="flex: 1 1 auto">
                     <div class="row d-flex flex-column items-carousel-title text-center justify-content-center"  >
                         <div class="col-12">
@@ -162,7 +525,8 @@
                         <button type="button" class="btn btn-light site-btns mt-3 col-8 w-75">SHOP NOW</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            
         </div><!-- Image carousel menu-->
 
     </Section>
@@ -177,9 +541,9 @@
                 <div class=" row d-flex justify-content-between mt-4 mb-5 compare">
                     <div class="col-lg-6 col-m-8 col-12 my-4">
                         <div class="card h-100">
-                            <div class="card-header p-4"><h3 class="card-title fw-bold text-info ">Standing Desks</h3></div>
+                            <div class="card-header p-4"><h3 class="card-title fw-bold text-info " id="compareT1">Standing Desks</h3></div>
                             <div class="card-body  py-3 px-4 d-flex flex-column align-items-start" id="comp-items1">
-                                <div class="card-desc">
+                                <!-- <div class="card-desc">
                                     <p>Largest work surface available</p>
                                 </div>
                                 <div class="card-desc" >
@@ -190,16 +554,16 @@
                                 </div>
                                 <div class="card-desc">
                                     <p>Great for spacious offices</p>
-                                </div>
+                                </div> -->
                                 
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6  col-m-8 col-12 my-4">
                         <div class="card h-100">
-                            <div class="card-header p-4" style="color: blue;" ><h3 class="card-title fw-bold text-info">Desktop Converters</h3></div>
+                            <div class="card-header p-4" style="color: blue;" ><h3 class="card-title fw-bold text-info" id="compareT2">Desktop Converters</h3></div>
                             <div class="card-body  py-3 px-4 d-flex flex-column align-items-start" id="comp-items2">
-                                <div class="card-desc">
+                                <!-- <div class="card-desc">
                                     <p>Sits on existing desk/table/cubicle</p>
                                 </div>
                                 <div class="card-desc" >
@@ -210,7 +574,7 @@
                                 </div>
                                 <div class="card-desc">
                                     <p>Smaller footprint than a full desk</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -222,28 +586,28 @@
 
     <main-reuse></main-reuse><!--reuseable component-->
 
-    <div class="container-fluid max-width-container d-flex flex-column justify-content-center p-0 myfooter" >
-        <div class="container-fluid d-flex justify-content-center max-width-container w-100 form signup  mb-4">
+    <div class="container-fluid max-width-container d-flex flex-column justify-content-center p-0 myfooter" > <!--Footer-->
+        <div class="container-fluid d-flex justify-content-center max-width-container w-100 form signup  ">
             <section class="row d-flex my-5 compare w-100 ">
-                <form >
+                <form action="">
                     <div class="col-lg-6 col-m-6 col-12 d-flex text-center pe-4 flex-column small" style="line-height: 2rem;">
                         Be the first to know about the altest products,deals,and tips for elevating your workspace
                     </div>
                     <div class="col-lg-6 col-m-6 col-12 d-flex justify-content-start  align-items-start ">
-                        <input type="text" placeholder="Email Address" class="form-control w-50">
-                        <button class="">SIGN UP</button>
+                        <input type="text" placeholder="Email Address" id="email" class="form-control w-50">
+                        <button class="" id="emailbtn">SIGN UP</button>
                     </div>
                 </form>
             </section> 
         </div>
         <div class="container-fluid max-width-container footerend">
-            <div class="row  d-flex flex-row justify-content-center max-width-container   my-3 "  style="background-color: white;">
-                <section class="col-12 col-m-4 col-lg-2"><h3 class="service" >Vari®</h3></section>
+            <div class="row  d-flex flex-row justify-content-center max-width-container  signup my-3 "  style="background-color: white;">
+                <section class="col-12 col-m-4 col-lg-2"><h3 class="service vari" >vari®</h3></section>
                 <section class="col-12 col-m-4 col-lg-7">
-                    <div class=" row d-flex flex-row justify-content-center max-width-container  signup my-3 "  style="background-color: white;">
-                        <section class="col-6 col-m-4 col-lg-3" >
-                            <p class="title my-2">PRODUCTS</p>
-                            <ul>
+                    <div class=" row d-flex flex-row justify-content-center max-width-container   my-3" id="horizontalTab"  style="background-color: white;">
+                        <section class="col-6 col-m-4 col-lg-3 accordion" id="PRODUCTS" >
+                            <p class="title my-2" id="tab1" >PRODUCTS</p>
+                            <ul href="#tab1">
                                 <li>Sit-Stand</li>
                                 <li>VariDesk Converters</li>
                                 <li>Desks and Tables</li>
@@ -256,9 +620,9 @@
                                 <li>View All Products</li>
                             </ul>
                         </section>
-                        <section class="col-6 col-m-4 col-lg-3" >
-                            <p class="title my-2">ABOUT</p>
-                            <ul>
+                        <section class="col-6 col-m-4 col-lg-3 accordion" id="ABOUT" >
+                            <p class="title my-2" id="tab2" >ABOUT</p>
+                            <ul href="#tab2">
                                 <li>Our Company</li>
                                 <li>The Vari Difference</li>
                                 <li>Corporate Programs</li>
@@ -267,9 +631,9 @@
                                 <li>Careers</li>
                             </ul>
                         </section>
-                        <section class="col-6 col-m-4 col-lg-3" >
-                            <p class="title my-2">SUPPORT</p>
-                            <ul>
+                        <section class="col-6 col-m-4 col-lg-3 accordion" id="SUPPORT" >
+                            <p class="title my-2" id="tab3">SUPPORT</p>
+                            <ul href="#tab3">
                                 <li>Shipping Policy</li>
                                 <li>Warranty</li>
                                 <li>Returns</li>
@@ -279,9 +643,9 @@
                                 <li>Contact Us</li>
                             </ul>
                         </section>
-                        <section class="col-6 col-m-4 col-lg-3" >
-                            <p class="title my-2">RESOURCES</p>
-                            <ul>
+                        <section class="col-6 col-m-4 col-lg-3 accordion" id="RESOURCES" >
+                            <p class="title my-2" id="tab4">RESOURCES</p>
+                            <ul href="#tab4">
                                 <li>Resource Center</li>
                                 <li>Buyer's Guide</li>
                                 <li>Review</li>
@@ -302,7 +666,7 @@
                         <a href="" te>CONNECT WITH US</a><br>
                         <a href=""><img class="contact-img" src="data:image/png;base64,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"/></a>
                         <a href=""><img class="contact-img" src="data:image/png;base64,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"/></a>
-                        <a href=""><img class="contact-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBhvAbwa1iJuXq-ZQHr3V_gFQCG58NEZzcpg&usqp=CAU"/></a>
+                        <a href=""><img class="contact-img" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png"/></a>
                         <a href=""><img class="contact-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8Ad7UAdbQAcrMAbbAAcLIAbrEAcbIAdLSqyODw9/sAa7DP4u8jf7nI3et7qs8mhb3d6vNWmMbk7/b1+vza6PKLttabwNtwps1fnchIkcJYmcaWvNnL3uy/1+ikxd5posuyzuOEstQ2ib4AZa270+YEfbmOpUs0AAAOeElEQVR4nNVdiZaiOhCVkIQooAi4oa0oT///Ex863aRCokIBEu+ZM2emF8g1SW2pVE0mQyOdrY7Tw2WRZ0UR3RzHuYVRke0Wl835uEwHf/2wWF0Pu8jhlDPPFYQQp/xT4v4PIVyPccqcIj+cV2MPFIPkvIh8yjzxj9RTECI8RmmxOCdjD7kFkunOocx9Ta1G1GXUiU/LsYfeAOlxe/OZaMNOTifzne3R6q05O+8ZFwhyEoKzeDobm8gTXGOKm7w6SUazs30zGWwZ74FdRZLnP2NTUjCNaB+zp5Ck0WlsWn9YLihrQK/Uh0KUf+5/kTc65N8vMHqxQYUEMXVfT8ZD4XHmlpZMvM+3+W4fF5HDyi8+DIFXv+vx3djWQJD5z4d4V3L0lpVGS5Do4nGWBOfNNg7pS9Up/CwYgdcfVhl9ohtKS4WycHEO3svENJguQs69Z1pG0NE4rmLfPCpSsssO8zZabTY/ZIx65rkU/n4MY2e2Nc9fKeijNU7SB+vwCUlBtx+3AjaeSb6Udld26iL/kkPkG0m6bNPb2JtgHhr0A3FptOn+USflTBpWB2HhB7djbhCghPFFX5I92Jo0LKHbnp7/DkdXX6CEFudeX3K3krS3eOTY60vMSHNq4tf/q+eZQVTTvPf3aO8V2gQKPx5mhwR7naPnDGyRX3x9/uLhlNVyp61V4l8Ge12pAyOmvS8e1nBc7rR5ZMVguvFYt6wIL4aX4KuivvEFuw7zqnVdR3judJg31XB1akuH+Osh3hPz+gZcfCzUcKG1D5fve39HEtZk6EdNjMkqrE2jF/W8GYNaCI3QQdbJCxxq0yhEryLuWNvsLPq8O7OqC3Lao5VxqsmYQVXSc9SUMfF7E3QH9cliaLPiKQKi7hW/J49qrRJk2XjR2jRTBbp/6OOpa2UPEjrOCq1Go26YPgSeStCh/TpJ7XGmPVM8KAR7FtEoLNVoMu24UE/KHnRDG06FZpFifHQTN1OFIMv6GmRHZIpm7KI0jgpBnvc2xK7IFZHqz7HPWSmbmi76HGNHLKB4IBxpYc2UtTCylqjjolAkOPkQQQPi45b2OyhCnkSYR8SuzQRritrbIR4AN7NlS/QflIVKW+sMRYyyTwWb22ELBUVbgTqDUXWv/5BBP4g9QFG0kzYFICiKgQbYHYXADvMC5p/c7Mtt+UPqgJngLaThHGxCwm3Ih3iGBO4mv7FnnoLV3Ws0ZAAoEpE0XW07oAm7OieDA6pFr6HMv4LfcW0VoxLQMmm44EASD7kNPLweoEgb0uQ3tvAzGTNbpykCsBWbrNMArFFmnzVqAtRt9H2YJZRzbrGqVwEU/3svYwM+D6s1IUQC1h1/k7MJ7VH+2RydLjjIeSHua6UIxAzOqxwJkZwY72W0ZQmmm37D1YA/rODAX22uWH4UzEan9zku0pESL/x9qFka6U6LALJw/ecaA0jd0c8n2uIsoy7iaeR6Lhfz16hCCeC0PzXFikYTbSvAFiPx2x95tVmtRSzeTRAQpC8Frq0Aqk4YJxH8gJt/eHD9YAcEpUmZL9zvnkLFPHUNXlQKdmH+8cH1gxzsRN06BU6Fj7TXkp+fca8ur+QsMd3FkH7hc4X5CunaoZRTmo0Zm8uqSdT9BuDaU8yR6tn9XQOCDpfg+hbAZtG0/vYF+waAaS6Ej2cuSC9K1GWN9HwNK/gtzsqBP2kcme0dp0qaEKZ+5yrtVr/9c2e1+x/uaCYR0AhcTZWW9oxJk7zDxXNUYKVxd4Ddptg1sxc7tAG0G5LuaO4zlJhQ4p3l8g07PfXvKePFeKTWY9DF3Vdf9hAnMef6LYwxZc2h2jEEnLmkUlL4CJN0qjN0R9OJCbBr5Md8rCQpwfj2V5vmEKhEIE2lAELd1Fzq+3DEIIhcpkDp36qh4YKktzpDb8QjHRA6rc4Gl9XSxUjSiRJU/93NY+ahys+7EirS1MHqsRrBcaPJ0pVnf5mn+2obcmSm5lzJL3fHDUVKuVkF1OQxMcc+9QpSUVk0bgJOWm1E4vz7igxv4HzfB5bho34LIa4/eqatjPv+BpykSYIxaCqcs9LJd8PF+FGsdaUvfg03uTOx2/APs5kVCWJyI/5KTjmpzIbLBt0h07d/LY+u2tA+AAvm/l9pc2mhjW+FjJs+bDRpN2MiNFZCxn75PbYpLdWvyIBqgnklah7aQZ5nUKSgSeY6lB/4ef3t8gmr4CdY9ibnZpVoeRxQSH8Km6Z3+o/XQFXT26G1b/8ntUp6XBSe/wiX+14YX3qpm1hZaXdhKlP70BaN7uM7qo8f1r/N/2gEOecuuG4nXE533S/hVgrwbrfNpHrEilI0w6WxlpagnWtRSGFavkk6jOhKTFiGl2e13kRX2xZIzyUwcRg2wQTHcFbov1ah43VqOaLSEJX/QSsLFMPZ7WWh024+5hxOG5hQrFeAYZiGT1boH7wnGSONIO00bzO5SM8Cq48QDNWbcUbQDhZWIsXnerKQkUTs89ozFCeu/UodBGuATO4h7upNC2nSEHSuXnuGTv2wygS3g0CV/lM+ySrliD5NQTBshA7uqjRqsklRsUVLr8EY4tOwI2C2Vf82Z0qNybDDGZ2MW0TyvA2frTcUww65WVXaSfkpVR4/PhMKz5AQj5W+xrNCy2grS+YpktuoDJnYH67z+XGz50b1iPYFwJGvI48cPs7QdWRBi9lCO6Fzugg/kKYIGH54HzL14t/ZRBF9yrADc1it0mepw++BYqj52xuDmYM5c38gBoGLW2cXH8WQCM09KnR5g3Z3pCwNgbb4KEND5PKqTyLHJjpCS03aNJ+02ogwPEd/DMMW15HhtUKyRYfaMAyNgjvWK85iD8OkdMmAb/FB78msy9eax4HOeJDe0w5mmiCfhmFozPnQc6vQ+XHQPxzFx4fpShJzTdRgGc7gCaISeMOhPUPzjlhpSh/rBCtxGrk0ODbWjJhDo1RLemOoxNqODPwHB8QcGjVTfwzBtB3B0kCL5t4Y6vsQyRBsvRVID0Y7F/YxlK5FKT5TAoI2ONjHUDl7AmnDWKPGPoaOEkCUWW3YjELrGMo84YfTK20lbMKQdQyP6jm+lKzY+KR1DDcy7eueCL3qnE9jHUOQT/O4giWT25GixjqGtZwo4C0iDwpsYyjt7t9g3bZrirBtDEFu4qI2QKTdZhtDLb902TVH2DaGWo4wyPOmqAwIyximwEX5/ZIMn1KUi2gZQ0Ouftf7FpYxBPct/oKyXe/MWMYQ3Jmp4jLykQ0Kuumwi6Hp3hPQiCh9YRdD4901cP8QE9q3iyG4fyhPPVJwV72XO6QjMjTfIQX1JDDL1CqG4B4wPBCVY8QsU6sYgrvc8OAK3sdvL01tYghuznPFQJPLFPGx2cRQFn4ktTwBOUja9qFWMQRTqNbFkOmKiHNXixgCgVI//JGhjfZJLBYxfFGf5gfImrYOxuk/Wkf9Rkn92+azJ+05fsvY2PyVxJTsWyfWJD+BBuUH9G8bs0hS/TktjzRf1YkCLtQ3Fk38h9e1voBn/LX12mDRPUO04vtr7kk/1yyiwAnsV5a+VKfQOEf7N4UVbQdwfYW54cHX1y99X2A2E29/xGLAGrTP4r5A63eoHzEWmtQRVmpBD9T6ejCcG03PzxfX8xbvd+Ed31uTfdGsJjs0e75LYzSuqw97I3xV0fLGvRHU/hbfU0QC9rd4d5ANygnb3a0LAhaMez8v39hnBnTbbBAN/YGfh+0Nu/6hZa8gtSfZNxhvbfs9wUKYVncG/IPSB6+ZnQLvWH1B3zXgLzQu1A1vdljfO+8CQpBNe+dNUqVPrt39D2Gjv+b9D5W2iYTZrBUT2Fi7eQ/L0o6FfUhDe6UNug+p2rHatdcbhsNs6bQnHHw4LB9mfJ3RpR/w5Aor5XM7fUW1p3PrdC4ohW1sPN65L3epSRWdYZ9a7NxbfZKGwmaKB0UR4m74zpQrnZYtVGUG0QXSA6hOHWqTuFH2IGHokJLSEtqhoxcIrrBV7vG1F6MSJ4Uit8XRiJXEAR97pf0BZT87XmGDAZcWioDwOwbMlB3tiNv4ZniilrLrLuTXahsgPvZ5xlEt1+P3oMUOKsWRReqBqgR70WEbhaLDuxVt7IQ0Vi9D+z01ZVYlquM6Y9UbDhy12FI3KQpxrhUa7WdttEZthRK/x363P1ylyIrPy9QkU9PeCO91KS0JqT3+08c2p1rJM0J6Pv1LI69Gsfjk+eKyUFeo4w3QRGNXq+kgPuhtXGitOA8dJB3mUC9szMhnWltfnVoCK+lDz5twZPUyR7QY/ugmKOoFQYg3WJRaL98s/P2w2zHZaSW/2aBtQC++U+dI8+E0R5LXN+DwyngutBqOLs2HWavJlmov80jHTjHvkeZ6gUMxRI/cYG8oSU+3nzCKj0SvcyxodOrz3ek00ten4zmDT+AvtjX1ewdh/ravxRrk1FC0VXwyULSKuD6CckNGm+5SZ7YxTd/diPpsUsHUNZXkLicyOnQZSHIofGPNXU/05ik1RbowfdJ3dUxviytqTwbr0LQ6H6vjMobbneTP+lO4nGaHeRu9PJsfMkY98/OEP6DKfY1VZhA5v6PyKAvzTQOaaTBdhJx7z5pBCBqPmSW5MvZR+VuwgnF6y/LDOUh0prMkOG+2cUgp0zomw/mLx85aWu11w0Mdo/AYpZyJsMjifb7Nd/u4iJySPGWeeNnGo9x/u7H53bHcmsVffUYJEaL8c/+LkCa/wOhl/AD0P6R3FdZgzG3Qt5XUGcGWmYwALD1Gdxa2SLvGT7RZe3rZ2arpk5idY85fy443IILz7GR1o8n0mjs+Q23KUrlQZ9tL37WhsTzF5KWSM7BzGSXxxgbV0BTL86IotaD3bjZLFVKqSz/aTr/pekeF5XGTFzePljaZKx7tgn9ZlStSuB4rLQEn2q+nForNVkiT+fm0XuRZEYX3Cke3W2nd7LeXw/S4+kB73f8B9SzH+1a20QgAAAAASUVORK5CYII="/></a>
                         <a href=""><img class="contact-img" src="data:image/jpeg;base64,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"/></a>
                         <a href=""><img class="contact-img" src="data:image/png;base64,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"/></a>
@@ -313,27 +677,18 @@
                 </section>
                 
             </div>
-            <div class="row d-flex flex-row max-width-container my-3  terms">
-                <div class="col-12 col-m-4 col-lg-4 text-start "><p class=" small">©2020, 2021 Varidesk, LLC. All rights reserved</p></div>     
-                <div class="col-12 col-m-8 col-lg-8 text-start">
+            <div class="row d-flex flex-row max-width-container mt-4 mb-5  terms">
+                <div class="col-12 col-m-3 col-lg-3 text-start "><p class=" small">©2020, 2021 Varidesk, LLC. All rights reserved</p></div>     
+                <div class="col-12 col-m-9 col-lg-9 text-start">
                     <a>Patents & Trademarks |</a>
                     <a>Terms & Conditions |</a>
                     <a>Privacy & Cookie Policy |</a>
                     <a>Accessibility|</a>
-                    <a><img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw0aaafd50/privacyoptions29x14.png"/> Not Sell My Personal Information |</a>
+                    <a><img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw0aaafd50/privacyoptions29x14.png"/> Not Sell My Personal Information</a>
                 </div>
             </div>
         </div>
-        
     </div>
-
-
-
-
-    
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

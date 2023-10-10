@@ -1,5 +1,5 @@
-@import "./headerbutton";
-@import './headertitle';
+@import "./coverbutton";
+@import './covertitle';
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
 @mixin myfooter{
@@ -21,13 +21,13 @@
     
     #bbb{
         margin-top:5%;
-        width:200px;
+        width:150px;
         height:50px;
     }
     .contact-img{
         width: 40px;
         height:40px;
-        margin:2%;
+        margin:1%;
     }
     a{
         text-decoration: none;
@@ -40,15 +40,11 @@
         @media screen and (max-width:600px) {
             padding: 0px;
             justify-content: center;
-            .info{
-                
-            }
         }
     }//footer end
 
     .signup{
         background-color: #e6e8e9;
-        
         .title{
             font-size: 1.2rem ;
             padding:0px;
@@ -78,17 +74,33 @@
             p{
                 font-size: 1rem !important;
             }
+            ul li{
+                font-size: 0.7rem !important;
+            }
+            h3{
+                text-align: left;
+            }
         }
 
         
     }//sign up
+
+    .compare form{
+        display:flex;
+        justify-content: center;
+        @media screen  and (max-width:600px){
+            flex-direction: column;
+            
+        }
+    }
+    
 
     h3{
         @include title;
     }
 
     button{
-        @include header-btn;
+        @include cover-btn;
         width: 25% !important;
         border: none !important;
         border-radius: 0;
@@ -118,3 +130,9 @@
     }
 
 }
+
+.accordion{
+    @media screen  and (max-width:600px){
+         ul{display:none}
+    }
+    }
