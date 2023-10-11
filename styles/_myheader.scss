@@ -1,52 +1,80 @@
+
 .vari{
     font-weight: 700;
     font-size: 3rem;
     color: #003349 !important;
     font-family: "Libre Franklin", sans-serif;
-    @media screen and (max-width:600px) {
-        
-        font-size:2rem !important;
-        text-align: center;
+}
+@media screen and (max-width:992px) {
+    .vari{
+       font-size:2rem !important;
+        text-align: center; 
+    }    
+    .upper-options{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            div.dropdown-menu ul{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    .lower-options{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 }
-
 .header-ul > li {
     
         display: inline;
-        margin:1em;
+        margin-right:1em;
         
 }
 .searchbtn{
     border:none;
     background-color: white;
+    display: flex;
+    align-items: center;
 }
 .search{
     border:2px solid rgb(62, 149, 199);
-    :hover{
-        border:2px solid rgb(26, 245, 227);
+    &:hover{
+        border:2px solid rgb(62, 149, 199);
+    }
+    input{
+        &:focus{
+            outline: none;
+        }
     }
 }
 .search input{
     border:none;
+}
+.dropdown-menu{
+    max-height: 550px;
 }
 .dropdown-item {
     max-width: 1600px;
     padding-left: 5em;
     padding-right:5em;
 }
-@media screen and (min-width:992px){
-    .mask{
+.desktop{
+    display:none;
+}
+.mobile{
+    display:block;
+}
+@media screen and (min-width:993px){
+    .mobile{
         display: none;
-        background-color: #000;
-        opacity: 0.7;
-        width:100vw;
-        height:100vh;
-        z-index: 2;
-        position: absolute;
     }
-    .unmasked{
-        z-index: 10000; 
-        background-color: white;
+    .desktop{
+        display: block;
         
     }
     .mega{
@@ -54,7 +82,16 @@
         background-color: white !important;
         width:100vw;
         height:calc(50vh + 100%);
-        inset: 30% auto auto 0 !important;
+        inset: 25% auto auto 0 !important;
+    }
+    .cart{
+        position: absolute !important;
+        height:calc(3vh + 100%);
+        width: 10vw !important;
+        top:180% !important;
+        a{
+            text-align: center;
+        }
     }
 }
 .dropdown-child{
@@ -105,7 +142,15 @@
 }
 
 
-.mega{
-    width: 100vw !important;
-    z-index: 999;
+.category.mask{
+    position: static;
+    &.show + .dropdown-menu{
+        background: #ccc;
+        box-shadow: 0 100vh 0 100vh rgba(0,0,0,.75),0 5px 5px rgba(0,0,0,.75);
+        width: 100vw;
+        border-width: 1px 0 0;
+        border-radius: 0;
+        margin-left: -1px;
+    }
 }
+

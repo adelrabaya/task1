@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-lg-4 col-12 order-last  order-md-last d-flex flex-column justify-content-center">
-            <aside class="row  w-85  p-3 my-header">
+            <aside class="row  w-85  p-3 reuseP">
                 <h3 class="col-12 display-6  fw-bold">VariSpace® Southlake is Move-In<br> Ready</h3>
                 <p class="col-12">Our VariDesk line of desktop converters set the industry standard and inspired plenty of other products on the market, but there's a reason we continue to be the #1 name in sit-stand desk solutions: Unmatched quality and customer service.
                 <br class="col-12"><br>Every Vari product is tested and certified to meet the highest industry standards for durability and safety, and each one comes with a solid warranty and a risk-free, 30-Day Hassle-Free Returns Policy.</p>

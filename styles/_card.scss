@@ -5,6 +5,7 @@
     }
 }
 @mixin card-body{
+    align-items: start;
     background-color: #f2f1ee !important;
     color:black;
 }

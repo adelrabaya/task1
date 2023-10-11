@@ -6,32 +6,55 @@
   color: #003349 !important;
   font-family: "Libre Franklin", sans-serif;
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 992px) {
   .vari {
     font-size: 2rem !important;
     text-align: center;
   }
+  .upper-options ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .upper-options ul div.dropdown-menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .lower-options ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
-
 .header-ul > li {
   display: inline;
-  margin: 1em;
+  margin-right: 1em;
 }
 
 .searchbtn {
   border: none;
   background-color: white;
+  display: flex;
+  align-items: center;
 }
 
 .search {
   border: 2px solid rgb(62, 149, 199);
 }
-.search :hover {
-  border: 2px solid rgb(26, 245, 227);
+.search:hover {
+  border: 2px solid rgb(62, 149, 199);
+}
+.search input:focus {
+  outline: none;
 }
 
 .search input {
   border: none;
+}
+
+.dropdown-menu {
+  max-height: 550px;
 }
 
 .dropdown-item {
@@ -40,26 +63,36 @@
   padding-right: 5em;
 }
 
-@media screen and (min-width: 992px) {
-  .mask {
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media screen and (min-width: 993px) {
+  .mobile {
     display: none;
-    background-color: #000;
-    opacity: 0.7;
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
-    position: absolute;
   }
-  .unmasked {
-    z-index: 10000;
-    background-color: white;
+  .desktop {
+    display: block;
   }
   .mega {
     z-index: 10000;
     background-color: white !important;
     width: 100vw;
     height: calc(50vh + 100%);
-    inset: 30% auto auto 0 !important;
+    inset: 25% auto auto 0 !important;
+  }
+  .cart {
+    position: absolute !important;
+    height: calc(3vh + 100%);
+    width: 10vw !important;
+    top: 180% !important;
+  }
+  .cart a {
+    text-align: center;
   }
 }
 .dropdown-child {
@@ -105,15 +138,128 @@
   font-weight: bold;
 }
 
-.mega {
-  width: 100vw !important;
-  z-index: 999;
+.category.mask {
+  position: static;
+}
+.category.mask.show + .dropdown-menu {
+  background: #ccc;
+  box-shadow: 0 100vh 0 100vh rgba(0, 0, 0, 0.75), 0 5px 5px rgba(0, 0, 0, 0.75);
+  width: 100vw;
+  border-width: 1px 0 0;
+  border-radius: 0;
+  margin-left: -1px;
 }
 
-@media screen and (max-width: 600px) {
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+@media screen and (max-width: 992px) {
   .accordion ul {
     display: none;
   }
+  .dropdown-toggle::after {
+    display: inline-block !important;
+  }
+  .reuseP {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+.burgerToggle {
+  display: block;
+  position: relative;
+  left: 1vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burgerToggle input {
+  position: absolute;
+  width: 3.3vw;
+  height: 3.8vh;
+  top: 3vh;
+  left: 0.5vw;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.burgerToggle span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  z-index: 1;
+  position: relative;
+  background: #313131;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  transform-origin: 4px 0px;
+  transition: transform 2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.burgerToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.burgerToggle span:nth-child(2) {
+  transform-origin: 0% 100%;
+}
+
+.burgerToggle input:checked ~ span:nth-child(2) {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.burgerToggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.burgerToggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(0px, -2px);
+}
+
+#menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 100%;
+  left: -10px;
+  background: white;
+  list-style-type: none;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.burgerToggle input:checked ~ #menu {
+  transform: none !important;
+}
+
+.burger-menu-div {
+  background: #f8f8f8;
+}
+
+.burger-menu {
+  list-style-type: none;
+  padding: 1rem;
+}
+.burger-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+.burger-menu li {
+  position: static;
 }
 
 * {
@@ -122,7 +268,7 @@
 
 body {
   overflow-x: hidden;
-  max-width: 100%;
+  max-width: 100vw;
 }
 
 .site-btns {
@@ -141,13 +287,9 @@ div.card-desc > p {
   font-size: 1.15rem;
 }
 
-div.card-desc {
-  margin-top: calc(5px * height * 1);
-}
-
 .coverFace h3 {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #003349 !important;
   font-family: "Libre Franklin", sans-serif;
 }
@@ -179,7 +321,7 @@ div.card-desc {
     margin-left: 2em !important;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .coverFace {
     width: 100%;
     padding: 0rem !important;
@@ -207,10 +349,26 @@ div.card-desc {
 }
 
 .card-body {
+  align-items: start;
   background-color: #f2f1ee !important;
   color: black;
 }
 
+@media screen and (max-width: 600px) {
+  #comp-items1 {
+    align-items: center !important;
+  }
+  #comp-items2 {
+    align-items: center !important;
+  }
+  .service {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+  .compare {
+    width: 100% !important;
+  }
+}
 .samples p {
   font-size: 1rem !important;
 }
@@ -218,23 +376,12 @@ div.card-desc {
 .service {
   text-align: left;
 }
-@media screen and (max-width: 600px) {
-  .service {
-    font-size: 2rem !important;
-    text-align: center;
-  }
-}
 
 .compare {
   width: 75%;
 }
-@media screen and (max-width: 600px) {
-  .compare {
-    width: 100% !important;
-  }
-}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .myfooter .info p {
     font-size: 16px;
   }
@@ -266,7 +413,7 @@ div.card-desc {
   padding-left: 5rem;
   padding-right: 5rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .myfooter .footerend {
     padding: 0px;
     justify-content: center;
@@ -282,6 +429,25 @@ div.card-desc {
   color: #0090cb;
   font-weight: 500 !important;
 }
+@media screen and (max-width: 992px) {
+  .myfooter .signup .title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  .myfooter .signup .vari {
+    text-align: center;
+  }
+  .myfooter .signup #ABOUT, .myfooter .signup #PRODUCTS, .myfooter .signup #SUPPORT, .myfooter .signup #RESOURCES {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .myfooter .signup li {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
 .myfooter .signup p {
   font-weight: 400 !important;
 }
@@ -289,11 +455,12 @@ div.card-desc {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
+  margin: 0 auto;
 }
 .myfooter .signup ul li {
   margin-top: 1rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .myfooter .signup {
     padding: 1rem;
   }
@@ -314,14 +481,14 @@ div.card-desc {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .myfooter .compare form {
     flex-direction: column;
   }
 }
 .myfooter h3 {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #003349 !important;
   font-family: "Libre Franklin", sans-serif;
 }
@@ -344,7 +511,7 @@ div.card-desc {
   line-height: 2rem;
   border-radius: 0;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   .myfooter .form {
     font-size: 0.8rem !important;
     font-weight: 500 !important;

@@ -8,67 +8,66 @@
     <link rel="stylesheet"  href="styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6d22bc3524.js" crossorigin="anonymous"></script>
-    <script src="reuse.js" type="text/javascript" ></script>
-    <script src="script.js" type="text/javascript" defer></script>
-    <script src="mask.js" defer ></script>
-    <script src="validate.js" defer></script>
-    <script src="fetching.js" defer></script>
+    <script src="./scripts/reuse.js" type="text/javascript" ></script>
+    <script src="./scripts/accordion.js" type="text/javascript" defer></script>
+    <script src="./scripts/validate.js" defer></script>
+    <script src="./scripts/fetching.js" defer></script>
   </head>
 
   <body style="width:100vw">
-    <div class="mask"></div>
-    <nav class="container-fluid max-width-container g-0 p-3 unmasked" style="position: relative;"><!-- Head of the page -->
+    <nav class="container-fluid max-width-container g-0 desktop" style="position: relative;"><!-- Head of the page| DESKTOP -->
         <div class="row g-0 d-flex flex-row justify-content-evenly ">
-            <section class="col-12 col-m-4 col-lg-2 d-flex justify-content-center align-items-center" ><h3 class=" vari" >vari®</h3></section>
-            <section class="col-12 col-m-4 col-lg-9">
-                    <div class="row g-0"><!--Upper Settings-->
-                        <section class="col-12 col-m-12 col-lg-12" >
+            <section class="col-12 col-m-2 col-lg-2 d-flex justify-content-center align-items-center" ><h3 class=" vari" >vari®</h3></section>
+            <section class="col-12 col-m-9 col-lg-9">
+                    <div class="row g-0 "><!--Upper Settings-->
+                        <section class="col-12 col-m-12 col-lg-12 px-5 upper-options " >
                             <ul class="header-ul text-end pt-3">
-                                <li class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">
+                                <li class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;"><!--Account-->
                                     <img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-my-account" style="width:20px;height:20px;" alt="account"/>
-                                    <a >MyAccount <i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a></li>
-                                    <div class="dropdown-menu   justify-content-center" >
-                                        <li class="dropdown-item">
-                                            <ul class="flex-wrap" style="list-style-type: none; padding-left:0px;">
-                                                <li>LogIn/Create Account</li>
-                                                <li>My List</li>
-                                                <li>Order Status</li>
-                                            </ul>
-                                        </li>
-                                    </div>
-                                <li class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">
+                                    <a >MyAccount <i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                </li>
+                                <div class="dropdown-menu   justify-content-center" ><!--Account drop menu-->
+                                    <li class="dropdown-item">
+                                        <ul class="flex-wrap" style="list-style-type: none; padding-left:0px;">
+                                            <li>LogIn/Create Account</li>
+                                            <li>My List</li>
+                                            <li>Order Status</li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <li class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;"><!--Region-->
                                     <img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-country" style="width: 20px; height: 20px;"/>
-                                    <a>United States<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a></li>
-                                    <div class="dropdown-menu   justify-content-center" >
-                                        <li class="dropdown-item">
-                                            <ul class="flex-wrap" style="list-style-type: none; padding-left:0px;">
-                                                <li class="p-1" style="color: #373737; font-size:0.75rem ;">SELECT SHIPPING REGION</li>
-                                                <li class="p-1">United States</li>
-                                                <li class="p-1">United States</li>
-                                                <li class="p-1">Australia</li>
-                                                <li class="p-1">Canada</li>
-                                                <li class="p-1">Europe</li>
-                                                <li class="p-1">United Kingdom</li>
-                                                <li class="p-1">Israel</li>
-                                                <li class="p-1">Singapore/Malaysia</li>
-                                                <li class="p-1">South Africa</li>
-                                            </ul>
-                                        </li>
-                                    </div>
+                                    <a>United States<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                </li>
+                                <div class="dropdown-menu   justify-content-center" ><!--Region drop menu-->
+                                    <li class="dropdown-item">
+                                        <ul class="flex-wrap" style="list-style-type: none; padding-left:0px;">
+                                            <li class="p-1" style="color: #373737; font-size:0.75rem ;">SELECT SHIPPING REGION</li>
+                                            <li class="p-1">United States</li>
+                                            <li class="p-1">United States</li>
+                                            <li class="p-1">Australia</li>
+                                            <li class="p-1">Canada</li>
+                                            <li class="p-1">Europe</li>
+                                            <li class="p-1">United Kingdom</li>
+                                            <li class="p-1">Israel</li>
+                                            <li class="p-1">Singapore/Malaysia</li>
+                                            <li class="p-1">South Africa</li>
+                                        </ul>
+                                    </li>
+                                </div>
                                 <li ><a style="text-decoration: none; color:black;">+1 (800) 207-2587</a></li>
                             </ul>
                         </section>
     
                     </div>
-                    <div class="row g-0 d-flex"><!-- CATEGORY MENU-->
-                        <section class="col-12 col-m-6 col-lg-8" >
-                            <ul class="header-ul">
-                                <li class="fw-bold dropdown"  style="position: static !important;">
-                                    <!-- <i class="fa-solid fa-angle-down ms-1"  style="color: rgb(0, 162, 255);"></i> -->
-                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Products<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
-                                    <div class="dropdown-menu mega  justify-content-center"  >
+                    <div class="row g-0 d-flex "><!-- CATEGORY MENU-->
+                        <section class="col-12 col-m-6 col-lg-9 lower-options d-flex " >
+                            <ul class="header-ul m-0">
+                                <li class="fw-bold dropdown"  style="position: static !important;"><!--Products-->
+                                    <a class="category mask " data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Products<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                    <div class="dropdown-menu mega  justify-content-center p-0"  >
                                         
-                                        <div class="dropdown-item row d-flex   container-fluid max-width-container w-100 "   ><!--Products-->
+                                        <div class="dropdown-item  row d-flex py-0 h-100   container-fluid max-width-container w-100 "   >
                                             <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
                                             <div class="dropdown-child col-12 col-m-8 col-lg-6"><!-- Product Categories-->
                                                 <ul class="flex-wrap">
@@ -131,8 +130,8 @@
                                                     
                                                 </ul>
                                             </div>
-                                            <div class="dropdown-child col-12 col-m-4 col-lg-4 d-flex flex-column  prodSub"><!--Right SubMenu  -->
-                                                <div class="row g-0 flex-grow-1">
+                                            <div class="dropdown-child col-12 col-m-4 col-lg-4 h-100 d-flex flex-column  prodSub"><!--Right SubMenu  -->
+                                                <div class="row g-0 flex-grow-1 ">
                                                     <section class="col-lg-4 g-0">
                                                         <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="variDesk">
                                                     </section>
@@ -142,7 +141,7 @@
                                                         <a>Shop Home Office Sets</a>
                                                     </section>
                                                 </div>
-                                                <div class="row g-0 flex-grow-1">
+                                                <div class="row g-0 flex-grow-1 ">
                                                     <section class="col-lg-7 p-4 g-0">
                                                         <h6>Find the Best Solution For You</h6>
                                                         <p class="text-wrap small ">Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
@@ -156,7 +155,7 @@
                                                     <section class="col-lg-4 g-0">
                                                         <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="variDesk">
                                                     </section>
-                                                    <section class="col-lg-8 p-4 g-0">
+                                                    <section class="col-lg-8 p-4 g-0 h-100">
                                                         <h6>Save 30% on Accessories & Seating</h6>
                                                         <p class="text-wrap small">Save 30% on up to two accessories or office seating items when you buy an electric standing desk or VariDesk converter.</p>
                                                         <a>Discounts & Promotions</a>
@@ -167,8 +166,8 @@
                                     </div>
                                     
                                 </li>
-                                <li class="fw-bold dropdown"  style="position: static !important;">
-                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">collections<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                <li class="fw-bold dropdown"  style="position: static !important;"><!--collections-->
+                                    <a class="category mask" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">collections<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
                                     <div class="dropdown-menu mega justify-content-center" style=" position: absolute; top: 100px !important;" >
                                         <div class="dropdown-item row d-flex container-fluid max-width-container w-100 "  ><!--Products-->
                                             <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
@@ -225,8 +224,8 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="fw-bold dropdown"  style="position: static !important;">
-                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Workplace<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                <li class="fw-bold dropdown"  style="position: static !important;"><!--Workplace-->
+                                    <a class="category mask" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Workplace<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
                                     <div class="dropdown-menu mega justify-content-center" style=" position: absolute; top: 100px !important;;" >
                                         <div class="dropdown-item row d-flex container-fluid max-width-container w-100 "  ><!--Products-->
                                             <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
@@ -295,8 +294,8 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="fw-bold dropdown"  style="position: static !important;">
-                                    <a class="category" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Help<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
+                                <li class="fw-bold dropdown"  style="position: static !important;"><!--Help-->
+                                    <a class="category mask" data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Help<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
                                     <div class="dropdown-menu mega justify-content-center" style=" position: absolute; top: 100px !important;;" >
                                         <div class="dropdown-item row d-flex container-fluid max-width-container w-100 "  ><!--Products-->
                                             <div class="dropdown-child col-2 col-m-0 col-lg-2"></div>
@@ -348,26 +347,65 @@
                         </section>
     
     
-                        <section class="col-12 col-m-6 col-lg-4 d-flex justify-content-end pe-3" >
-                            <form action="" class="w-75 d-flex search ">
-                                <input class="form-control w-75 h-100" type="text" placeholder="Search">
-                                <button class="fa-solid fa-magnifying-glass w-25 searchbtn text-end" style="color: #5488e3;" type="submit" title="search"></button>
+                        <section class="col-12 col-m-6 col-lg-3 d-flex p-0 justify-content-start" ><!--SEARCH-->
+                            <form action="" class="row w-75  search" >
+                                <input class="col-lg-9  m-0 w-75  h-100" type="text" placeholder="Search" style="line-height: 2rem !important;" >
+                                <button class="col-lg-3 px-2  w-25 m-0 text-end fa-solid fa-magnifying-glass searchbtn " style="color: #5488e3; width:15%;" type="submit" title="search"></button>
                             </form>
                         </section>
                     </div>
             </section>
-            <section class="container col-4 col-m-2 col-lg-1 d-flex justify-content-start align-items-center p-5"><!--Cart-->
+            <section class="container col-12 col-m-1 col-lg-1 d-flex justify-content-center align-items-center"><!--Cart-->
                 <div class="dropdown">
                     <a class="" data-bs-toggle="dropdown"><img src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-cart" style="width:40px;height:30px;" alt=""></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-menu cart" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="#">Your Cart Is Empty</a>
                     </div>
                 </div>
             </section>
         </div>
 
-        <hr class="m-0"><!--hr-->
+        <hr class="m-0 mt-4"><!--hr-->
 
+    </nav>
+    <nav class="container-fluid max-width-container g-0 mobile"><!--HEAD of the page | < 992-->
+        <section class="row g-0 w-100 d-flex align-items-center" style="position: relative;">
+            <div class="col-4 col-m-4  burgerToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div id="menu">
+                        <div class="dropdown burger-menu-div">
+                            <ul class="burger-menu">
+                                <li class="my-2 dropdown">
+                                    <a class="dropdown-toggle" href="#">Products</a>
+                                    
+                                </li>
+                                <li class="my-2 dropdown">
+                                    <a class="dropdown-toggle" href="#">Collections</a>
+                                    
+                                </li>
+                                <li class="my-2 dropdown">
+                                    <a class="dropdown-toggle" href="#">Workplace</a>
+                                    
+                                </li>
+                                <li class="my-2 dropdown">
+                                    <a class="dropdown-toggle" href="#">Help</a>
+                                    
+                                </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-m-4 d-flex justify-content-center" ><p class="display-6 fw-bold" >vari®</p></div><!--Title-->
+            <div class="col-4 col-m-4 d-flex align-items-center justify-content-end px-3"><!--Search bar + Cart-->
+                <button class="btn fa-solid fa-magnifying-glass fa-sm fa-ms fa-lg" style="color: #3b69ba;"></button>
+                <div><img style="width:40px; height:30px" src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-cart" alt=""></div>
+            </div>
+        </section>
     </nav>
     <div class="container-fluid max-width-container g-0">
         <div class="row g-0 h-50 "><!--coverFace-->
@@ -542,7 +580,7 @@
                     <div class="col-lg-6 col-m-8 col-12 my-4">
                         <div class="card h-100">
                             <div class="card-header p-4"><h3 class="card-title fw-bold text-info " id="compareT1">Standing Desks</h3></div>
-                            <div class="card-body  py-3 px-4 d-flex flex-column align-items-start" id="comp-items1">
+                            <div class="card-body  py-3 px-4 d-flex flex-column " id="comp-items1">
                                 <!-- <div class="card-desc">
                                     <p>Largest work surface available</p>
                                 </div>
@@ -587,7 +625,7 @@
     <main-reuse></main-reuse><!--reuseable component-->
 
     <div class="container-fluid max-width-container d-flex flex-column justify-content-center p-0 myfooter" > <!--Footer-->
-        <div class="container-fluid d-flex justify-content-center max-width-container w-100 form signup  ">
+        <div class="container-fluid d-flex justify-content-center max-width-container w-100 form signup  "><!--Sign Up Form-->
             <section class="row d-flex my-5 compare w-100 ">
                 <form action="">
                     <div class="col-lg-6 col-m-6 col-12 d-flex text-center pe-4 flex-column small" style="line-height: 2rem;">
@@ -605,8 +643,8 @@
                 <section class="col-12 col-m-4 col-lg-2"><h3 class="service vari" >vari®</h3></section>
                 <section class="col-12 col-m-4 col-lg-7">
                     <div class=" row d-flex flex-row justify-content-center max-width-container   my-3" id="horizontalTab"  style="background-color: white;">
-                        <section class="col-6 col-m-4 col-lg-3 accordion" id="PRODUCTS" >
-                            <p class="title my-2" id="tab1" >PRODUCTS</p>
+                        <section class="col-12 col-m-4 col-lg-3 accordion " id="PRODUCTS" >
+                            <p class="title my-2 dropdown-toggle" id="tab1" data-bs-toggle="dropdown">PRODUCTS</p>
                             <ul href="#tab1">
                                 <li>Sit-Stand</li>
                                 <li>VariDesk Converters</li>
@@ -620,8 +658,8 @@
                                 <li>View All Products</li>
                             </ul>
                         </section>
-                        <section class="col-6 col-m-4 col-lg-3 accordion" id="ABOUT" >
-                            <p class="title my-2" id="tab2" >ABOUT</p>
+                        <section class="col-12 col-m-4 col-lg-3 accordion" id="ABOUT" >
+                            <p class="title my-2 dropdown-toggle " id="tab2" data-bs-toggle="dropdown" >ABOUT</p>
                             <ul href="#tab2">
                                 <li>Our Company</li>
                                 <li>The Vari Difference</li>
@@ -631,9 +669,9 @@
                                 <li>Careers</li>
                             </ul>
                         </section>
-                        <section class="col-6 col-m-4 col-lg-3 accordion" id="SUPPORT" >
-                            <p class="title my-2" id="tab3">SUPPORT</p>
-                            <ul href="#tab3">
+                        <section class="col-12 col-m-4 col-lg-3 accordion" id="SUPPORT" >
+                            <p class="title my-2 dropdown-toggle " id="tab3" data-bs-toggle="dropdown">SUPPORT</p>
+                            <ul href="#tab3" >
                                 <li>Shipping Policy</li>
                                 <li>Warranty</li>
                                 <li>Returns</li>
@@ -643,9 +681,9 @@
                                 <li>Contact Us</li>
                             </ul>
                         </section>
-                        <section class="col-6 col-m-4 col-lg-3 accordion" id="RESOURCES" >
-                            <p class="title my-2" id="tab4">RESOURCES</p>
-                            <ul href="#tab4">
+                        <section class="col-12 col-m-4 col-lg-3 accordion" id="RESOURCES" >
+                            <p class="title my-2 dropdown-toggle " id="tab4" data-bs-toggle="dropdown">RESOURCES</p>
+                            <ul href="#tab4" >
                                 <li>Resource Center</li>
                                 <li>Buyer's Guide</li>
                                 <li>Review</li>

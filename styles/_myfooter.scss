@@ -3,7 +3,7 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
 @mixin myfooter{
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:992px) {
         .info{
             p{
                 font-size: 16px;
@@ -37,7 +37,7 @@
         margin-right: auto;
         padding-left: 5rem;
         padding-right: 5rem;
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:992px) {
             padding: 0px;
             justify-content: center;
         }
@@ -51,22 +51,43 @@
             margin:0px;
             color:$title;
             font-weight: 500 !important;
+            @media screen and (max-width:992px) {
+                text-align: center;
+                
+            }
+        }
+        @media screen and (max-width:992px) {
+        .vari{
+            text-align: center;
+        }
+        #ABOUT,#PRODUCTS,#SUPPORT,#RESOURCES{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        li{
+            margin-top:1rem;
+            text-align: center;
+            
+        }
         }
         p{
             font-weight: 400 !important;
             
         }
-
+        
         ul{
             list-style-type: none;
             margin: 0px;
             padding:0px;
+            margin: 0 auto;
             li{
                 margin-top:1rem;
+                
             }
         }
 
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:992px) {
             padding: 1rem;
             section{
                 margin-top:5%;
@@ -88,7 +109,7 @@
     .compare form{
         display:flex;
         justify-content: center;
-        @media screen  and (max-width:600px){
+        @media screen  and (max-width:992px){
             flex-direction: column;
             
         }
@@ -117,7 +138,7 @@
     }
 
     .form{
-        @media  screen and (max-width:600px) {
+        @media  screen and (max-width:992px) {
             font-size: 0.8rem !important;
             font-weight: 500 !important;
             input{
@@ -131,8 +152,21 @@
 
 }
 
-.accordion{
-    @media screen  and (max-width:600px){
-         ul{display:none}
+.dropdown-toggle::after{
+    display: none !important;
+}
+
+
+@media screen  and (max-width:992px){
+    .accordion{
+        ul{display:none}
     }
+    .dropdown-toggle::after{
+        display: inline-block !important;
     }
+    .reuseP{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
