@@ -1,3 +1,5 @@
+@import './variables.scss';
+@media screen and (max-width:992px){
 .burgerToggle{
     display: block;
     position: relative;
@@ -21,16 +23,16 @@
 .burgerToggle  span{
     display: block;
     width:30px;
-    height:4px;
+    height:3px;
     z-index: 1;
     position: relative;
-    background: #313131;
+    background: $span;
     border-radius: 3px;
     margin-bottom: 5px;
     margin-left:5px;
     transform-origin: 4px 0px;
 
-    transition: transform 2s cubic-bezier(0.77,0.2,0.05,1.0),
+    transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
 }
@@ -51,7 +53,7 @@
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 .burgerToggle input:checked ~ span:nth-child(4){
-    transform: rotate(-45deg) translate(0px,-2px);
+    transform: rotate(-45deg) translate(-1px,0px);
 }
 
 #menu{
@@ -79,20 +81,57 @@
 }
 
 .burger-menu-div{
-    background: #f8f8f8;
+    background: $background;
 }
 
 .burger-menu{
     list-style-type: none;
-    padding: 1rem;
     a{
         text-decoration: none;
         color: black;
         font-weight: 500;
         font-size: 14px;
+        line-height: 2rem;
     }
     li{
         position: static;
     }
     
+}
+
+.dropdown {
+    .caret{
+        color: $caret;
+    }
+    
+}
+.dropdown-menu.show{
+    background-color: red;
+    position: absolute !important;
+    left:0 !important;
+}
+.dropdown-menu.submenu{
+    position: absolute !important;
+    display: block;
+    width:100%;
+    height: 100%;
+    left:-100%;
+    transition: left 0.5s cubic-bezier(0.1,0.5,0.7,1);
+    
+    
+}
+.dropdown-menu.show .dropdown-item{
+    width:100%;
+    border: none;
+    background: $background;
+    
+}
+.dropdown-submenu{
+    list-style-type: none;
+    display: none;
+    
+}
+.varidesk:hover  ul{
+    display: block;
+}
 }

@@ -61,8 +61,8 @@
   max-width: 1600px;
   padding-left: 5em;
   padding-right: 5em;
+  display: flex;
 }
-
 .desktop {
   display: none;
 }
@@ -84,6 +84,9 @@
     width: 100vw;
     height: calc(50vh + 100%);
     inset: 25% auto auto 0 !important;
+  }
+  .mega .dropdown-item {
+    padding: 0 !important;
   }
   .cart {
     position: absolute !important;
@@ -121,9 +124,17 @@
   margin: 2%;
 }
 
+@media screen and (max-width: 1199px) {
+  .waste-col {
+    display: none;
+  }
+}
 .prodSub {
   background-color: #f0f0f0;
   height: calc(50vh + 100%);
+}
+.prodSub div {
+  align-items: center !important;
 }
 .prodSub img {
   max-height: 100%;
@@ -131,11 +142,24 @@
 }
 .prodSub h6 {
   font-weight: bold;
+  font-size: 0.7525rem;
+  white-space: pre-wrap;
+  word-wrap: normal;
 }
 .prodSub a {
   text-decoration: underline !important;
   color: #409fc2 !important;
+  font-size: 0.7525rem;
   font-weight: bold;
+  white-space: pre-wrap;
+  word-wrap: normal;
+}
+.prodSub p {
+  font-size: 0.7525rem;
+  margin-bottom: 5px !important;
+  white-space: pre-wrap;
+  word-wrap: normal;
+  text-wrap: wrap;
 }
 
 .category.mask {
@@ -167,101 +191,118 @@
     justify-content: center;
   }
 }
-.burgerToggle {
-  display: block;
-  position: relative;
-  left: 1vw;
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media screen and (max-width: 992px) {
+  .burgerToggle {
+    display: block;
+    position: relative;
+    left: 1vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .burgerToggle input {
+    position: absolute;
+    width: 3.3vw;
+    height: 3.8vh;
+    top: 3vh;
+    left: 0.5vw;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .burgerToggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    z-index: 1;
+    position: relative;
+    background: #0090cb;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    transform-origin: 4px 0px;
+    transition: transform 1s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+  .burgerToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  .burgerToggle span:nth-child(2) {
+    transform-origin: 0% 100%;
+  }
+  .burgerToggle input:checked ~ span:nth-child(2) {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  .burgerToggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  .burgerToggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+  }
+  #menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 100%;
+    left: -10px;
+    background: white;
+    list-style-type: none;
+  }
+  #menu li {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .burgerToggle input:checked ~ #menu {
+    transform: none !important;
+  }
+  .burger-menu-div {
+    background: #f8f8f8;
+  }
+  .burger-menu {
+    list-style-type: none;
+  }
+  .burger-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2rem;
+  }
+  .burger-menu li {
+    position: static;
+  }
+  .dropdown .caret {
+    color: #0090cb;
+  }
+  .dropdown-menu.show {
+    background-color: red;
+    position: absolute !important;
+    left: 0 !important;
+  }
+  .dropdown-menu.submenu {
+    position: absolute !important;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    transition: left 0.5s cubic-bezier(0.1, 0.5, 0.7, 1);
+  }
+  .dropdown-menu.show .dropdown-item {
+    width: 100%;
+    border: none;
+    background: #f8f8f8;
+  }
+  .dropdown-submenu {
+    list-style-type: none;
+    display: none;
+  }
+  .varidesk:hover ul {
+    display: block;
+  }
 }
-
-.burgerToggle input {
-  position: absolute;
-  width: 3.3vw;
-  height: 3.8vh;
-  top: 3vh;
-  left: 0.5vw;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.burgerToggle span {
-  display: block;
-  width: 30px;
-  height: 4px;
-  z-index: 1;
-  position: relative;
-  background: #313131;
-  border-radius: 3px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  transform-origin: 4px 0px;
-  transition: transform 2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-
-.burgerToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-.burgerToggle span:nth-child(2) {
-  transform-origin: 0% 100%;
-}
-
-.burgerToggle input:checked ~ span:nth-child(2) {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-.burgerToggle input:checked ~ span:nth-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-.burgerToggle input:checked ~ span:nth-child(4) {
-  transform: rotate(-45deg) translate(0px, -2px);
-}
-
-#menu {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 100%;
-  left: -10px;
-  background: white;
-  list-style-type: none;
-}
-
-#menu li {
-  padding: 10px 0;
-  font-size: 16px;
-}
-
-.burgerToggle input:checked ~ #menu {
-  transform: none !important;
-}
-
-.burger-menu-div {
-  background: #f8f8f8;
-}
-
-.burger-menu {
-  list-style-type: none;
-  padding: 1rem;
-}
-.burger-menu a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  font-size: 14px;
-}
-.burger-menu li {
-  position: static;
-}
-
 * {
   margin: 0;
 }
