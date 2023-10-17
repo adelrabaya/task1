@@ -14,9 +14,10 @@
     <script src="./scripts/accordion.js" type="text/javascript" defer></script>
     <script src="./scripts/validate.js" defer></script>
     <script src="./scripts/fetching.js" defer></script>
+    <script src="./scripts/menuSlider.js" defer></script>
   </head>
 
-  <body style="width:100vw">
+  <body>
     <nav class="container-fluid max-width-container g-0 desktop" style="position: relative;"><!-- Head of the page| DESKTOP -->
         <div class="row g-0 d-flex flex-row justify-content-evenly ">
             <section class="col-12 col-m-2 col-lg-2 d-flex justify-content-center align-items-center" ><h3 class=" vari" >vari®</h3></section>
@@ -69,9 +70,9 @@
                                     <a class="category mask " data-bs-toggle="dropdown" style="text-decoration: none; color: black;">Products<i class="fa-solid fa-angle-down ms-1" style="color: #5d76a2;"></i></a>
                                     <div class="dropdown-menu mega  justify-content-center p-0"  >
                                         
-                                        <div class="dropdown-item  row d-flex py-0 h-100   container-fluid max-width-container w-100 "   >
-                                            <div class="dropdown-child col-0 col-m-0 col-xl-2 waste-col"></div>
-                                            <div class="dropdown-child col-12 col-md-8 col-xl-6"><!-- Product Categories-->
+                                        <div class=" row d-flex py-0 h-100   container-fluid max-width-container w-100 "   >
+                                            <div class="dropdown-child col-0 col-m-0 col-xl-2 waste-col h-100"></div>
+                                            <div class="dropdown-child col-12 col-md-8 col-xl-6 h-100"><!-- Product Categories-->
                                                 <ul class="flex-wrap pt-4">
                                                     <li class="dropdown-item">
                                                         <a>VariDesk Converters</a>
@@ -83,7 +84,7 @@
                                                     </li>
                                                     <li class="dropdown-item">
                                                         <a>Desks & Tables</a>
-                                                        <ul class="flex-wrap">
+                                                        <ul class="flex-wrap ">
                                                             <li>Standing Desks</li>
                                                             <li>Fixed-Height Desks</li>
                                                             <li>Tables</li>
@@ -132,10 +133,10 @@
                                                     
                                                 </ul>
                                             </div>
-                                            <div class="dropdown-child col-12 col-md-4 col-xl-4 h-100d-flex flex-column  prodSub"><!--Right SubMenu  -->
-                                                <div class="row g-0  ">
+                                            <div class="dropdown-child col-12 col-md-4 col-xl-4 h-100 d-flex flex-column  prodSub "><!--Right SubMenu  -->
+                                                <div class="row g-0" >
                                                     <section class="col-lg-4 g-0">
-                                                        <img class="img-fluid" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="variDesk">
+                                                        <img class="w-100 h-25" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="variDesk">
                                                     </section>
                                                     <section class="col-lg-8 px-3 g-0">
                                                         <h6>Home Office Spaces</h6>
@@ -154,10 +155,10 @@
                                                     </section>
                                                 </div>
                                                 <div class="row g-0 ">
-                                                    <section class="col-lg-4 g-0">
-                                                        <img class="img-fluid" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="variDesk">
+                                                    <section class="col-lg-4 g-0 h-100">
+                                                        <img class="img-fluid" style="height:170px;width:185px;" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="variDesk">
                                                     </section>
-                                                    <section class="col-lg-8 px-3 g-0 h-100">
+                                                    <section class="col-lg-8 px-3 g-0">
                                                         <h6>Discounts and Promotions</h6>
                                                         <p class="text-wrap small">Learn a few easy ways to save even more on our reasonable everyday prices.</p>
                                                         <a class="small">Discounts & Promotions</a>
@@ -219,7 +220,7 @@
                                                         <a>Shop the Collection</a>
                                                     </section>
                                                     <section class="col-lg-4">
-                                                        <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw778c619a/header-menu-banner/vari-product_executive-collection_06_top-nav-img.jpg" alt="variDesk">
+                                                        <img class="h-100" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw778c619a/header-menu-banner/vari-product_executive-collection_06_top-nav-img.jpg" alt="variDesk">
                                                     </section>
                                                 </div>
                                             </div>
@@ -370,104 +371,870 @@
         <hr class="m-0 mt-4"><!--hr-->
 
     </nav>
+
     <nav class="container-fluid max-width-container g-0 mobile"><!--HEAD of the page | < 992-->
-        <section class="row g-0 w-100 d-flex align-items-center" style="position: relative;">
-            <div class="col-4 col-m-4  burgerToggle">
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div id="menu">
-                        <div class="dropdown burger-menu-div h-100">
-                            <ul class="burger-menu p-0">
-                                <li class="my-2 dropdown"><!--Products-->
-                                    <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Products
-                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                    </a>
-                                    <div class="dropdown-menu submenu p-0">
-                                        <div class="dropdown-item row w-100 m-0 d-flex p-0">
-                                            <div class="col-12 p-0 ">
-                                                <ul class="p-0 h-100">
-                                                    <li class="dropdown-item  col-12 varidesk"><!--VariDesk Converters-->
-                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">VariDesk Converters
-                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>   
-                                                        </a>
-                                                        <ul class="col-12 dropdown-submenu">
-                                                            <li class="col-12 submenu">item here</li>
-                                                            <li class="col-12 submenu">item here</li>
-                                                            <li class="col-12 submenu">item here</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-item col-12 varidesk"><!--Desks & Tables-->
-                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Desks & Tables
-                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-item col-12 varidesk"><!--Seating-->
-                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Seating
-                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-item col-12 varidesk"><!--Storages-->
-                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Storages
-                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-item col-12 varidesk"><!--Partitions & Privacys-->
-                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Partitions & Privacys
-                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="dropdown-item col-12 varidesk"><!--Accessories-->
-                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Accessories
-                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-12"></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="my-2 dropdown"><!--Collections-->
-                                    <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Collections
-                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <a>items</a>
-                                    </div>
-                                </li>
-                                <li class="my-2 dropdown"><!--Workplace-->
-                                    <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Workplace
-                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <a>items</a>
-                                    </div>
-                                </li>
-                                <li class="my-2 dropdown"><!--Help-->
-                                    <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Help
-                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <a>items</a>
-                                    </div>
-                                </li>
-                                </a>
-                            </ul>
+        <div class="row nav-head w-100 h-25"><!--Nav Bar Head-->
+            <div class="col-4 burgerToggle"><!--Burger Spans-->
+                <input type="checkbox" onclick="showBurger()"/>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="col-4 d-flex align-items-center"><!--VARI TITLE-->
+                <section class="col-12 col-m-2 col-lg-2" ><h3 class=" vari" >vari®</h3></section>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center hideForBurger" id="searchcart"><!--SEARCH + CART-->
+                <button class="btn fa fa-magnifying-glass fa-lg search h-100" style="color: #0090cb"></button>
+                <button class="btn fa fa-cart-shopping fa-lg cart h-100" style="color: #0090cb"></button>
+            </div>
+        </div>
+        <div class="burger-menu-div" id="burger-menu-div"><!--Burger Menu Body-->
+            <div class="burger-menu w-100 " id="burger-menu">
+                <ul class="w-100 h-100" id="burger-ul">
+                    <li class="d-flex justify-content-between align-items-center py-3 px-3" id="product" onclick="showMenu(event)">
+                        Products
+                        <a href="" class="fa fa-angle-right fa-lg"></a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-3 px-3" id="collections" onclick="showMenu(event)">
+                        Collections
+                        <a href="" class="fa fa-angle-right fa-lg"></a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-3 px-3" id="workplace" onclick="showMenu(event)">
+                        Workplace
+                        <a href="" class="fa fa-angle-right fa-lg"></a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center py-3 px-3" id="help" onclick="showMenu(event)">
+                        Help
+                        <a href="" class="fa fa-angle-right fa-lg"></a>
+                    </li>
+                </ul>
+                <div class="options w-100"> <!--account and region-->
+                    <button class="btn myAccount d-flex justify-content-between align-items-center" onclick="hideOption(event)">
+                        <i class="fa-regular fa-user"></i>
+                        <div>
+                            My Account
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </button>
+                    <div class="w-100  m-2 px-5 hideOption" >
+                        <div class="d-flex ">
+                            <a href="" class="dropdown-item">Log In/Create Account</a>
+                            <a href="" class="dropdown-item">My List</a>
                         </div>
                     </div>
+                    
+                    <button class="btn myAccount d-flex justify-content-between align-items-center" onclick="hideOption(event)">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            Region
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </button>
+                    <div class="w-100  m-2 px-5 region hideOption" >
+                        <div class="row ">
+                            <div  class=" col-12 small">SELECT SHIPPING REGION </div>
+                            <div  class=" col-6 p-1">United States</div>
+                            <div  class=" col-6  p-1">Australia</div>
+                            <div  class=" col-6  p-1">Canada</div>
+                            <div  class=" col-6  p-1">Europe</div>
+                            <div  class=" col-6  p-1">United Kingdom</div>
+                            <div  class=" col-12  p-1">Israel</div>
+                            <div  class=" col-12  p-1">Singapoe/Malaysia</div>
+                            <div  class=" col-12  p-1">South Africa</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-4 col-m-4 d-flex justify-content-center" ><p class="display-6 fw-bold" >vari</p>®</div><!--Title-->
-            <div class="col-4 col-m-4 d-flex align-items-center justify-content-end px-3"><!--Search bar + Cart-->
-                <button class="btn fa-solid fa-magnifying-glass fa-sm fa-ms fa-lg" style="color: #3b69ba;"></button>
-                <div><img style="width:40px; height:30px" src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-cart" alt=""></div>
+            <div class="submenu">
+
+                <div><!--Products SECTION-->
+                    <ul class="w-100 hideOption" id="productMenu">
+                        <li class="d-flex justify-content-start align-items-center py-3 px-3" id="product-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
+                            <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                            Products
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="converters" onclick="showMenuSub(event)"><!--VariDesk-->
+                            VariDesk Converters
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="desks" onclick="showMenuSub(event)"><!--Desks-->
+                            Desks & Tables
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="seating" onclick="showMenuSub(event)"><!--Seating-->
+                            Seating
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="storage" onclick="showMenuSub(event)"><!--Storage-->
+                            Storage
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="partition" onclick="showMenuSub(event)"><!--Partition-->
+                            Partitions & Privacy
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="accessories" onclick="showMenuSub(event)"><!--Acessories-->
+                            Accessories
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Shop All-->
+                            Shop All Products
+                        </li>
+                    </ul>
+                    <section class="banner hideOption">
+                        <section class="row">
+                            <div class="col-4">
+                                <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
+                            </div>
+                            <div class="col-8 d-flex justify-content-start align-items-center">
+                                <div class="">
+                                    <h6>Home Office Spaces</h6>
+                                    <p>Everything you need to make working from home comfortable and productive.</p>
+                                    <a href="">Shop Home Office Sets</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-8 d-flex justify-content-start align-items-center">
+                                <div>
+                                    <h6>Find the Best Solution For You</h6>
+                                    <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                    <a href="">Take the Quiz</a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="" class="img-fluid">
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-4">
+                                <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="">
+                            </div>
+                            <div class="col-8 d-flex justify-content-start align-items-center">
+                                <div class="">
+                                    <h6>Discounts and Promotions</h6>
+                                    <p>Learn a few easy ways to save even more on our reasonable everyday prices.</p>
+                                    <a href="">Discounts & Promotions</a>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+                
+                <div><!--Collections SECTION-->
+                    <ul class="w-100 hideOption" id="collectionsMenu">
+                        <li class="d-flex justify-content-start align-items-center py-3 px-3" id="collections-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
+                            <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                            Collections
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="featured" onclick="showMenuSub(event)"><!--VariDesk-->
+                            Featured
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="deals" onclick="showMenuSub(event)"><!--Desks-->
+                            Deals
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="shopBySpace" onclick="showMenuSub(event)"><!--Seating-->
+                            Shop By Space
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li>
+                    </ul>
+                    <section class="banner hideOption">
+                        <section class="row">
+                            <div class="col-8 d-flex justify-content-start align-items-center">
+                                <div class="p-3">
+                                    <h3>Find the Best Solution For You</h3>
+                                    <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                    <button class="banner-btn">LEARN MORE</button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row px-2">
+                            <div class="col-8 d-flex justify-content-start align-items-center">
+                                <div>
+                                    <h6>Executive Office Collection</h6>
+                                    <p>Create sophisticated yet flexible offices with modular pieces that blend high-end quality and style with mix-and-match convenience</p>
+                                    <a href="">Shop the Collection</a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw778c619a/header-menu-banner/vari-product_executive-collection_06_top-nav-img.jpg" alt="" class="img-fluid">
+                            </div>
+                        </section>
+                    </section>
+                </div>
+                
+                <div><!--WORKPLACE SECTION-->
+                    <ul class="w-100 hideOption" id="workplaceMenu">
+                        <li class="d-flex justify-content-start align-items-center py-3 px-3" id="workplace-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
+                            <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                            Workplace
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="office" onclick="showMenuSub(event)"><!--Office-->
+                            Office Furniture Solutions
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="industries" onclick="showMenuSub(event)"><!--Industries-->
+                            Industries
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Showrooms-->
+                            Showrooms
+                        </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Case Studies-->
+                            Case Studies
+                        </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariSpace-->
+                            VariSpace
+                        </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Inspiration-->
+                            Inspiration Gallery
+                        </li>
+                    </ul>
+                    <section class="banner hideOption">
+                        <section class="row">
+                            <div class="col-8 d-flex justify-content-start align-items-center">
+                                <div class="p-3">
+                                    <h3>Visit our Showrooms</h3>
+                                    <p>Meet us in person at any of our showroom locations,or schedule a guided tour.</p>
+                                    <button class="banner-btn">SCHEDULE A TOUR</button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-12">
+                                <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw9277fb84/top-nav-menu/vari-topnav-showrooms-map.jpg" alt="" class="img-fluid">
+                            </div>
+                        </section>
+                    </section>
+                </div>
+                
+                <div> <!--HELP SECTION-->
+                    <ul class="w-100 hideOption" id="helpMenu">
+                        <li class="d-flex justify-content-start align-items-center py-3 px-3" id="help-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
+                            <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                            Help
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="resources" onclick="showMenuSub(event)"><!--VariDesk-->
+                            Resources
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li><li class="d-flex justify-content-between align-items-center py-3 px-3" id="about" onclick="showMenuSub(event)"><!--Desks-->
+                            About
+                            <a href="" class="fa fa-angle-right fa-lg"></a>
+                        </li>
+                    </ul>
+                    <section class="banner hideOption">
+                        <section class="row">
+                            <div class="col-12 d-flex  align-items-center">
+                                <div class="p-3">
+                                    <h6 class="small">FEATURED ARTICLE</h6>
+                                    <div class="row w-100">
+                                        <div class="col-2">
+                                            <img style="width: 70px;height: 70px;" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw08e52e32/top-nav-menu/vari-topnav-articles-mistakes.jpg" alt="">
+                                        </div>
+                                        <div class="col-10">
+                                            <a href=""> Top Standing Desk Mistakes to Avoid</a>
+                                            <p class="small">Everything you need to know about creating healthy standing habits</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
             </div>
-        </section>
+            <div class="submenu">
+                <div> <!--Product Submenu 2-->
+                    <div><!--converters SECTION-->
+                        <ul class="w-100 hideOption" id="convertersMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="converters-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                VariDesk Converters
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                For Desktops
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                For Small Spaces
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Shop All VariDesk Converters
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Home Office Spaces</h6>
+                                        <p>Everything you need to make working from home comfortable and productive.</p>
+                                        <a href="">Shop Home Office Sets</a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Find the Best Solution For You</h6>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <a href="">Take the Quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Discounts and Promotions</h6>
+                                        <p>Learn a few easy ways to save even more on our reasonable everyday prices.</p>
+                                        <a href="">Discounts & Promotions</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--desks SECTION-->
+                        <ul class="w-100 hideOption" id="desksMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="desks-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Desks & Tables
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Standing Desks
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Fixed-Height Desks
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Tables
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Shop All Desks & Tables
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Home Office Spaces</h6>
+                                        <p>Everything you need to make working from home comfortable and productive.</p>
+                                        <a href="">Shop Home Office Sets</a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Find the Best Solution For You</h6>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <a href="">Take the Quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Discounts and Promotions</h6>
+                                        <p>Learn a few easy ways to save even more on our reasonable everyday prices.</p>
+                                        <a href="">Discounts & Promotions</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--seating SECTION-->
+                        <ul class="w-100 hideOption" id="seatingMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="seating-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Seating
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                OfficeSeating
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Group Seating
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Lounge Seating
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Shop All Seating
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Home Office Spaces</h6>
+                                        <p>Everything you need to make working from home comfortable and productive.</p>
+                                        <a href="">Shop Home Office Sets</a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Find the Best Solution For You</h6>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <a href="">Take the Quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Discounts and Promotions</h6>
+                                        <p>Learn a few easy ways to save even more on our reasonable everyday prices.</p>
+                                        <a href="">Discounts & Promotions</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--storage SECTION-->
+                        <ul class="w-100 hideOption" id="storageMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="storage-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Storage
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                File Cabinets
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Storage Seating
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Shop All Storage
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Home Office Spaces</h6>
+                                        <p>Everything you need to make working from home comfortable and productive.</p>
+                                        <a href="">Shop Home Office Sets</a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Find the Best Solution For You</h6>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <a href="">Take the Quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Discounts and Promotions</h6>
+                                        <p>Learn a few easy ways to save even more on our reasonable everyday prices.</p>
+                                        <a href="">Discounts & Promotions</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--partition SECTION-->
+                        <ul class="w-100 hideOption" id="partitionMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="partition-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Partition
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Walls
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Privacy Panels
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Beams & Privacy Booth
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Shop All Partitions & Privacy
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Home Office Spaces</h6>
+                                        <p>Everything you need to make working from home comfortable and productive.</p>
+                                        <a href="">Shop Home Office Sets</a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Find the Best Solution For You</h6>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <a href="">Take the Quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Discounts and Promotions</h6>
+                                        <p>Learn a few easy ways to save even more on our reasonable everyday prices.</p>
+                                        <a href="">Discounts & Promotions</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--accessories SECTION-->
+                        <ul class="w-100 hideOption" id="accessoriesMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="accessories-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Accessories
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Monitor Arms
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Standing Mats
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Marker Boards
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Power & Lighting
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Shop All Accessories
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Home Office Spaces</h6>
+                                        <p>Everything you need to make working from home comfortable and productive.</p>
+                                        <a href="">Shop Home Office Sets</a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Find the Best Solution For You</h6>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <a href="">Take the Quiz</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dwfdec3c68/header-menu-banner/vari-topnav_promo-find-your-fit.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-4">
+                                    <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw0a616d85/header-menu-banner/0985-vari-deals-lp_deal-nav-promo.jpg" alt="">
+                                </div>
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="">
+                                        <h6>Discounts and Promotions</h6>
+                                        <p>Learn a few easy ways to save even more on our reasonable everyday prices.</p>
+                                        <a href="">Discounts & Promotions</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div> <!--Collections Submenu 2-->
+                    <div><!--featured SECTION-->
+                        <ul class="w-100 hideOption" id="featuredMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="featured-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Featured
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Best Sellers
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                New Products
+                            </li>
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                bundles
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="p-3">
+                                        <h3>Find the Best Solution For You</h3>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <button class="banner-btn">LEARN MORE</button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row px-2">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Executive Office Collection</h6>
+                                        <p>Create sophisticated yet flexible offices with modular pieces that blend high-end quality and style with mix-and-match convenience</p>
+                                        <a href="">Shop the Collection</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw778c619a/header-menu-banner/vari-product_executive-collection_06_top-nav-img.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--deals SECTION-->
+                        <ul class="w-100 hideOption" id="dealsMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="deals-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Deals
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Promotions
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Essential Collection
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Clearance
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Open Box
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="p-3">
+                                        <h3>Find the Best Solution For You</h3>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <button class="banner-btn">LEARN MORE</button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row px-2">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Executive Office Collection</h6>
+                                        <p>Create sophisticated yet flexible offices with modular pieces that blend high-end quality and style with mix-and-match convenience</p>
+                                        <a href="">Shop the Collection</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw778c619a/header-menu-banner/vari-product_executive-collection_06_top-nav-img.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--shopBySpace SECTION-->
+                        <ul class="w-100 hideOption" id="shopBySpaceMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="shopBySpace-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Shop By Space
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Work From Home Sets
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Private Office Sets
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Retrofit Spaces Sets
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Common Spaces Sets
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                All Product Sets
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="p-3">
+                                        <h3>Find the Best Solution For You</h3>
+                                        <p>Simply answer a few quick questions and we'll suggest the best height-adjustable product for you.</p>
+                                        <button class="banner-btn">LEARN MORE</button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row px-2">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div>
+                                        <h6>Executive Office Collection</h6>
+                                        <p>Create sophisticated yet flexible offices with modular pieces that blend high-end quality and style with mix-and-match convenience</p>
+                                        <a href="">Shop the Collection</a>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw778c619a/header-menu-banner/vari-product_executive-collection_06_top-nav-img.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div> <!--Collections Submenu 2-->
+                    <div><!--Office SECTION-->
+                        <ul class="w-100 hideOption" id="officeMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="office-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Office Furniture Solutions
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Redesign your space
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Remote Work SOlutions
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Flexible Office Furniture
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Safer Solutions
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Free Space Planning
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="p-3">
+                                        <h3>Visit our Showrooms</h3>
+                                        <p>Meet us in person at any of our showroom locations,or schedule a guided tour.</p>
+                                        <button class="banner-btn">SCHEDULE A TOUR</button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-12">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw9277fb84/top-nav-menu/vari-topnav-showrooms-map.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--Industries SECTION-->
+                        <ul class="w-100 hideOption" id="industriesMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="industries-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Industires
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Federal Government
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                State & Local Government
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Architecture & Design
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Education
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                View All Industries
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-8 d-flex justify-content-start align-items-center">
+                                    <div class="p-3">
+                                        <h3>Visit our Showrooms</h3>
+                                        <p>Meet us in person at any of our showroom locations,or schedule a guided tour.</p>
+                                        <button class="banner-btn">SCHEDULE A TOUR</button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col-12">
+                                    <img src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw9277fb84/top-nav-menu/vari-topnav-showrooms-map.jpg" alt="" class="img-fluid">
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div> <!--Help Submenu 2-->
+                    <div><!--Resources SECTION-->
+                        <ul class="w-100 hideOption" id="resourcesMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="resources-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                Resources
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Articles & Videos
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Find Your Fit
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Inspiration Gallery
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Design Resources
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Lookbook
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                Product Certifications
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-12 d-flex  align-items-center">
+                                    <div class="p-3">
+                                        <h6 class="small">FEATURED ARTICLE</h6>
+                                        <div class="row w-100">
+                                            <div class="col-2">
+                                                <img style="width: 70px;height: 70px;" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw08e52e32/top-nav-menu/vari-topnav-articles-mistakes.jpg" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <a href=""> Top Standing Desk Mistakes to Avoid</a>
+                                                <p class="small">Everything you need to know about creating healthy standing habits</p>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div><!--About SECTION-->
+                        <ul class="w-100 hideOption" id="aboutMenu">
+                            <li class="d-flex justify-content-start align-items-center py-3 px-3" id="about-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
+                                <a href="" class="fa fa-angle-left fa-lg me-2"></a>
+                                About
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--VariDesk-->
+                                Contact Vari
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Desks-->
+                                FAQ
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Our Company
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Reviews
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                Showrooms
+                            </li><li class="d-flex justify-content-start align-items-center py-3 px-3"><!--Seating-->
+                                The Vari Difference
+                            </li>
+                        </ul>
+                        <section class="banner hideOption">
+                            <section class="row">
+                                <div class="col-12 d-flex  align-items-center">
+                                    <div class="p-3">
+                                        <h6 class="small">FEATURED ARTICLE</h6>
+                                        <div class="row w-100">
+                                            <div class="col-2">
+                                                <img style="width: 70px;height: 70px;" src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw08e52e32/top-nav-menu/vari-topnav-articles-mistakes.jpg" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <a href=""> Top Standing Desk Mistakes to Avoid</a>
+                                                <p class="small">Everything you need to know about creating healthy standing habits</p>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
     </nav>
-    <div class="container-fluid max-width-container g-0">
-        <div class="row g-0 h-50 "><!--coverFace-->
+
+
+    <div class="hideForBurger"> <!--container to hide page when burger is ON-->
+    <div class="container-fluid max-width-container g-0 hideForBurger"><!--coverFace-->
+        <div class="row g-0 h-50 ">
         <div class="col-lg-4 col-12 order-last order-lg-first d-flex justify-content-center ps-3" > <!--HEADER TEXT DIV-->
             <aside class="justify-content-center  coverFace  d-flex flex-column" >
                 <p class="text-secondary">UNLOCK THE ULTIMATE WORKDAY</p>
@@ -488,7 +1255,7 @@
     </div>
     
     <br>
-    <Section class="container-fluid px-0 m-0 pt-5 g-0 "> <!--Samples Carousel Menu-->
+    <Section class="container-fluid px-0 m-0 pt-5 g-0 hideForBurger"> <!--Samples Carousel Menu-->
         <h1 class="text-center mt-4">Height-Adjustable Standing Desks & Office Furniture</h1>
         <div class="row g-0 justify-content-center  m-4 d-flex flex-row justify-content-center" id="carouselM">
 <!-- 
@@ -628,7 +1395,7 @@
 
     </Section>
     <hr>
-    <section class="container-fluid d-flex justify-content-center"> <!-- Comparison Menu Container-->
+    <section class="container-fluid d-flex justify-content-center hideForBurger"> <!-- Comparison Menu Container-->
         <div class="text-center m-0">
             <h1 class="display-4 fw-bold" style="color: black;">What's the Difference?</h1>
             <h6 class="">Both options help you create a sit-stand workspace, but which one is the better choice for you?
@@ -683,7 +1450,7 @@
 
     <main-reuse></main-reuse><!--reuseable component-->
 
-    <div class="container-fluid max-width-container d-flex flex-column justify-content-center p-0 myfooter" > <!--Footer-->
+    <div class="container-fluid max-width-container d-flex flex-column justify-content-center p-0 myfooter hideForBurger" > <!--Footer-->
         <div class="container-fluid d-flex justify-content-center max-width-container w-100 form signup  "><!--Sign Up Form-->
             <section class="row d-flex my-5 compare w-100 ">
                 <form action="">
@@ -786,7 +1553,7 @@
             </div>
         </div>
     </div>
-
+    </div>
 
     
   </body>

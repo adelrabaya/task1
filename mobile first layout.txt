@@ -1,0 +1,342 @@
+<section class="row g-0 w-100 d-flex align-items-center" style="position: relative;">
+            <div class="col-4 col-m-4  burgerToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div id="menu">
+                        <div class=" burger-menu-div h-100 w-100">
+                            <ul class="burger-menu px-0 py-2 " id="burger-menu">
+                                <li class="my-2 dropdown "><!--Products-->
+                                    <a class="w-100 d-flex align-items-center justify-content-between  px-5 hideMenu"   data-bs-auto-close="false"    data-bs-toggle="dropdown" href="#">
+                                        Products
+                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                    </a>
+                                    <div class="dropdown-menu hideMenu  submenu p-0 ">
+                                        <div class=" row w-100 m-0 d-flex p-0">
+                                            <div class="col-12 p-0 ">
+                                                <ul class="p-0 h-100">
+                                                    <li class="dropdown-item col-12 varidesk menu-opt" ><!--Products Back Button-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-start px-4" onclick="hideshow(event)"  data-bs-toggle="dropdown" href="#">
+                                                            <div class="fa-solid fa-chevron-left fa-xs fa-lg caret"></div> 
+                                                            Products
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--VariDesk Converters-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">VariDesk Converters
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>   
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Desks & Tables-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Desks & Tables
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Seating-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Seating
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Storages-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Storages
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Partitions & Privacys-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Partitions & Privacys
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Accessories-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Accessories
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-12"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="my-2 dropdown"><!--Collections-->
+                                    <a class="w-100 d-flex align-items-center justify-content-between px-5 hideMenu"   data-bs-auto-close="false" data-bs-toggle="dropdown" href="#">Collections
+                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                    </a>
+                                    <div class="dropdown-menu hideMenu  submenu p-0 ">
+                                        <div class=" row w-100 m-0 d-flex p-0">
+                                            <div class="col-12 p-0 ">
+                                                <ul class="p-0 h-100">
+                                                    <li class="dropdown-item col-12 varidesk menu-opt" ><!--VariDesk Converters-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-start px-4" onclick="hideshow(event)"  data-bs-toggle="dropdown" href="#">
+                                                            <div class="fa-solid fa-chevron-left fa-xs fa-lg caret"></div> 
+                                                            Products
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--VariDesk Converters-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">VariDesk Converters
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>   
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Desks & Tables-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Desks & Tables
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Seating-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Seating
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Storages-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Storages
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Partitions & Privacys-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Partitions & Privacys
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Accessories-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Accessories
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-12"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="my-2 dropdown"><!--Workplace-->
+                                    <a class="w-100 d-flex align-items-center justify-content-between px-5 hideMenu"   data-bs-auto-close="false" data-bs-toggle="dropdown" href="#">Workplace
+                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                    </a>
+                                    <div class="dropdown-menu hideMenu  submenu p-0 ">
+                                        <div class=" row w-100 m-0 d-flex p-0">
+                                            <div class="col-12 p-0 ">
+                                                <ul class="p-0 h-100">
+                                                    <li class="dropdown-item col-12 varidesk menu-opt" ><!--VariDesk Converters-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-start px-4" onclick="hideshow(event)"  data-bs-toggle="dropdown" href="#">
+                                                            <div class="fa-solid fa-chevron-left fa-xs fa-lg caret"></div> 
+                                                            Products
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--VariDesk Converters-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">VariDesk Converters
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>   
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Desks & Tables-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Desks & Tables
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Seating-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Seating
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Storages-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Storages
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Partitions & Privacys-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Partitions & Privacys
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Accessories-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Accessories
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-12"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="my-2 dropdown"><!--Help-->
+                                    <a class="w-100 d-flex align-items-center justify-content-between px-5 hideMenu"   data-bs-auto-close="false" data-bs-toggle="dropdown" href="#">Help
+                                        <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                    </a>
+                                    <div class="dropdown-menu hideMenu  submenu p-0 ">
+                                        <div class=" row w-100 m-0 d-flex p-0">
+                                            <div class="col-12 p-0 ">
+                                                <ul class="p-0 h-100">
+                                                    <li class="dropdown-item col-12 varidesk menu-opt" ><!--VariDesk Converters-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-start px-4" onclick="hideshow(event)"  data-bs-toggle="dropdown" href="#">
+                                                            <div class="fa-solid fa-chevron-left fa-xs fa-lg caret"></div> 
+                                                            Products
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--VariDesk Converters-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">VariDesk Converters
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>   
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Desks & Tables-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Desks & Tables
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Seating-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Seating
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Storages-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Storages
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Partitions & Privacys-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Partitions & Privacys
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown-item col-12 varidesk"><!--Accessories-->
+                                                        <a class="w-100 d-flex align-items-center justify-content-between px-4" data-bs-toggle="dropdown" href="#">Accessories
+                                                            <div class="fa-solid fa-chevron-right fa-xs fa-lg caret"></div>
+                                                        </a>
+                                                        <ul class="col-12 dropdown-submenu">
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                            <li class="col-12 submenu">item here</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-12"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-m-4 d-flex justify-content-center" ><p class="display-6 fw-bold" >vari</p>®</div><!--Title-->
+            <div class="col-4 col-m-4 d-flex align-items-center justify-content-end px-3"><!--Search bar + Cart-->
+                <button class="btn fa-solid fa-magnifying-glass fa-sm fa-ms fa-lg" style="color: #3b69ba;"></button>
+                <div><img style="width:40px; height:30px" src="https://www.vari.com/on/demandware.static/-/Library-Sites-VariGlobalContentLibrary/default/dw142ffd04/sprites/global-sprite.svg#icon-cart" alt=""></div>
+            </div>
+        </section>
