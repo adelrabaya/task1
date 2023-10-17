@@ -277,6 +277,8 @@
     visibility: hidden;
   }
   .burger-menu {
+    position: absolute;
+    left: 0;
     font-weight: 600;
     font-size: 14px;
   }
@@ -310,6 +312,11 @@
   .submenu a {
     text-decoration: none;
   }
+  .submenu ul {
+    padding-left: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
   .banner {
     border-top: 1px solid #dfdfdf;
   }
@@ -328,6 +335,31 @@
     line-height: 2.7rem;
     border: none !important;
     width: 40%;
+  }
+  .submenu > div {
+    width: 100vw;
+    position: absolute;
+    left: -100%;
+    transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+  }
+  .trial {
+    left: 0% !important;
+    transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+  }
+  .try {
+    left: -100%;
+  }
+  .searchbar {
+    position: relative;
+  }
+  .searchbar input {
+    border: 2px blue solid;
+    border-radius: 3px;
+  }
+  .searchbar button {
+    position: absolute;
+    right: 0.5em;
+    top: 12px;
   }
 }
 * {

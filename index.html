@@ -384,10 +384,14 @@
                 <section class="col-12 col-m-2 col-lg-2" ><h3 class=" vari" >vari®</h3></section>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center hideForBurger" id="searchcart"><!--SEARCH + CART-->
-                <button class="btn fa fa-magnifying-glass fa-lg search h-100" style="color: #0090cb"></button>
+                <button class="btn fa fa-magnifying-glass fa-lg search h-100" style="color: #0090cb" onclick="search()"></button>
                 <button class="btn fa fa-cart-shopping fa-lg cart h-100" style="color: #0090cb"></button>
             </div>
         </div>
+        <form class="searchbar w-100   hideOption" id="searchbar">
+            <input class="form-control" type="text" placeholder="Search" class="w-100">
+            <button class="btn fa fa-magnifying-glass fa-lg search" style="color: #0090cb"></button>
+        </form>
         <div class="burger-menu-div" id="burger-menu-div"><!--Burger Menu Body-->
             <div class="burger-menu w-100 " id="burger-menu">
                 <ul class="w-100 h-100" id="burger-ul">
@@ -449,7 +453,7 @@
             <div class="submenu">
 
                 <div><!--Products SECTION-->
-                    <ul class="w-100 hideOption" id="productMenu">
+                    <ul class="w-100 " id="productMenu">
                         <li class="d-flex justify-content-start align-items-center py-3 px-3" id="product-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
                             <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                             Products
@@ -475,7 +479,7 @@
                             Shop All Products
                         </li>
                     </ul>
-                    <section class="banner hideOption">
+                    <section class="banner ">
                         <section class="row">
                             <div class="col-4">
                                 <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
@@ -516,7 +520,7 @@
                 </div>
                 
                 <div><!--Collections SECTION-->
-                    <ul class="w-100 hideOption" id="collectionsMenu">
+                    <ul class="w-100 " id="collectionsMenu">
                         <li class="d-flex justify-content-start align-items-center py-3 px-3" id="collections-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
                             <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                             Collections
@@ -531,7 +535,7 @@
                             <a href="" class="fa fa-angle-right fa-lg"></a>
                         </li>
                     </ul>
-                    <section class="banner hideOption">
+                    <section class="banner ">
                         <section class="row">
                             <div class="col-8 d-flex justify-content-start align-items-center">
                                 <div class="p-3">
@@ -557,7 +561,7 @@
                 </div>
                 
                 <div><!--WORKPLACE SECTION-->
-                    <ul class="w-100 hideOption" id="workplaceMenu">
+                    <ul class="w-100 " id="workplaceMenu">
                         <li class="d-flex justify-content-start align-items-center py-3 px-3" id="workplace-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
                             <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                             Workplace
@@ -577,7 +581,7 @@
                             Inspiration Gallery
                         </li>
                     </ul>
-                    <section class="banner hideOption">
+                    <section class="banner ">
                         <section class="row">
                             <div class="col-8 d-flex justify-content-start align-items-center">
                                 <div class="p-3">
@@ -596,7 +600,7 @@
                 </div>
                 
                 <div> <!--HELP SECTION-->
-                    <ul class="w-100 hideOption" id="helpMenu">
+                    <ul class="w-100 " id="helpMenu">
                         <li class="d-flex justify-content-start align-items-center py-3 px-3" id="help-submenu" onclick="hideMenu(event)"><!--Products Click Back-->
                             <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                             Help
@@ -608,7 +612,7 @@
                             <a href="" class="fa fa-angle-right fa-lg"></a>
                         </li>
                     </ul>
-                    <section class="banner hideOption">
+                    <section class="banner ">
                         <section class="row">
                             <div class="col-12 d-flex  align-items-center">
                                 <div class="p-3">
@@ -632,8 +636,8 @@
             </div>
             <div class="submenu">
                 <div> <!--Product Submenu 2-->
-                    <div><!--converters SECTION-->
-                        <ul class="w-100 hideOption" id="convertersMenu">
+                    
+                        <ul class="w-100 " id="convertersMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="converters-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 VariDesk Converters
@@ -645,7 +649,7 @@
                                 Shop All VariDesk Converters
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-4">
                                     <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
@@ -683,9 +687,9 @@
                                 </div>
                             </section>
                         </section>
-                    </div>
-                    <div><!--desks SECTION-->
-                        <ul class="w-100 hideOption" id="desksMenu">
+                    
+                    <!--desks SECTION-->
+                        <ul class="w-100 " id="desksMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="desks-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Desks & Tables
@@ -699,7 +703,7 @@
                                 Shop All Desks & Tables
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-4">
                                     <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
@@ -737,9 +741,9 @@
                                 </div>
                             </section>
                         </section>
-                    </div>
-                    <div><!--seating SECTION-->
-                        <ul class="w-100 hideOption" id="seatingMenu">
+                    
+                    <!--seating SECTION-->
+                        <ul class="w-100 " id="seatingMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="seating-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Seating
@@ -753,7 +757,7 @@
                                 Shop All Seating
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-4">
                                     <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
@@ -791,9 +795,9 @@
                                 </div>
                             </section>
                         </section>
-                    </div>
-                    <div><!--storage SECTION-->
-                        <ul class="w-100 hideOption" id="storageMenu">
+                    
+                    <!--storage SECTION-->
+                        <ul class="w-100 " id="storageMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="storage-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Storage
@@ -805,7 +809,7 @@
                                 Shop All Storage
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-4">
                                     <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
@@ -843,9 +847,9 @@
                                 </div>
                             </section>
                         </section>
-                    </div>
-                    <div><!--partition SECTION-->
-                        <ul class="w-100 hideOption" id="partitionMenu">
+                    
+                    <!--partition SECTION-->
+                        <ul class="w-100 " id="partitionMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="partition-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Partition
@@ -859,7 +863,7 @@
                                 Shop All Partitions & Privacy
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-4">
                                     <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
@@ -897,9 +901,9 @@
                                 </div>
                             </section>
                         </section>
-                    </div>
-                    <div><!--accessories SECTION-->
-                        <ul class="w-100 hideOption" id="accessoriesMenu">
+                    
+                    <!--accessories SECTION-->
+                        <ul class="w-100 " id="accessoriesMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="accessories-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Accessories
@@ -915,7 +919,7 @@
                                 Shop All Accessories
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-4">
                                     <img class="img-fluid"  src="https://www.vari.com/on/demandware.static/-/Sites-varius-site-catalog/default/dw20fcce81/header-menu-banner/set-home-office-complete-small-min.jpg" alt="">
@@ -953,11 +957,10 @@
                                 </div>
                             </section>
                         </section>
-                    </div>
                 </div>
                 <div> <!--Collections Submenu 2-->
                     <div><!--featured SECTION-->
-                        <ul class="w-100 hideOption" id="featuredMenu">
+                        <ul class="w-100 " id="featuredMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="featured-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Featured
@@ -970,7 +973,7 @@
                                 bundles
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-8 d-flex justify-content-start align-items-center">
                                     <div class="p-3">
@@ -995,7 +998,7 @@
                         </section>
                     </div>
                     <div><!--deals SECTION-->
-                        <ul class="w-100 hideOption" id="dealsMenu">
+                        <ul class="w-100" id="dealsMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="deals-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Deals
@@ -1009,7 +1012,7 @@
                                 Open Box
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-8 d-flex justify-content-start align-items-center">
                                     <div class="p-3">
@@ -1034,7 +1037,7 @@
                         </section>
                     </div>
                     <div><!--shopBySpace SECTION-->
-                        <ul class="w-100 hideOption" id="shopBySpaceMenu">
+                        <ul class="w-100 " id="shopBySpaceMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="shopBySpace-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Shop By Space
@@ -1050,7 +1053,7 @@
                                 All Product Sets
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-8 d-flex justify-content-start align-items-center">
                                     <div class="p-3">
@@ -1075,9 +1078,9 @@
                         </section>
                     </div>
                 </div>
-                <div> <!--Collections Submenu 2-->
+                <div> <!--Workplace Submenu 2-->
                     <div><!--Office SECTION-->
-                        <ul class="w-100 hideOption" id="officeMenu">
+                        <ul class="w-100 " id="officeMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="office-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Office Furniture Solutions
@@ -1093,7 +1096,7 @@
                                 Free Space Planning
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-8 d-flex justify-content-start align-items-center">
                                     <div class="p-3">
@@ -1111,7 +1114,7 @@
                         </section>
                     </div>
                     <div><!--Industries SECTION-->
-                        <ul class="w-100 hideOption" id="industriesMenu">
+                        <ul class="w-100 " id="industriesMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="industries-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Industires
@@ -1127,7 +1130,7 @@
                                 View All Industries
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-8 d-flex justify-content-start align-items-center">
                                     <div class="p-3">
@@ -1147,7 +1150,7 @@
                 </div>
                 <div> <!--Help Submenu 2-->
                     <div><!--Resources SECTION-->
-                        <ul class="w-100 hideOption" id="resourcesMenu">
+                        <ul class="w-100 " id="resourcesMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="resources-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 Resources
@@ -1165,7 +1168,7 @@
                                 Product Certifications
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-12 d-flex  align-items-center">
                                     <div class="p-3">
@@ -1186,7 +1189,7 @@
                         </section>
                     </div>
                     <div><!--About SECTION-->
-                        <ul class="w-100 hideOption" id="aboutMenu">
+                        <ul class="w-100 " id="aboutMenu">
                             <li class="d-flex justify-content-start align-items-center py-3 px-3" id="about-submenu2" onclick="hideMenuSub(event)"><!--Products Click Back-->
                                 <a href="" class="fa fa-angle-left fa-lg me-2"></a>
                                 About
@@ -1204,7 +1207,7 @@
                                 The Vari Difference
                             </li>
                         </ul>
-                        <section class="banner hideOption">
+                        <section class="banner ">
                             <section class="row">
                                 <div class="col-12 d-flex  align-items-center">
                                     <div class="p-3">
@@ -1225,6 +1228,8 @@
                         </section>
                     </div>
                 </div>
+            </div>
+                
 
             </div>
             
